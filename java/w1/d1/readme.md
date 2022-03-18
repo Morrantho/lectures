@@ -95,6 +95,35 @@ public class Program
 	<img align="center" src="../../res/img/alloc.png" />
 </div>
 
+## Naming Conventions
+
+Java programs use the ```PascalCase``` naming convention for classes as a standard. This means the first letter of each word including the first word is uppercase.
+
+PascalCase Examples:
+
+* ```UserController```
+* ```CategoryProduct```
+* ```CrudRepository```
+* ```CommentService```
+
+For variable, member, method, or function names, ```camelCase``` is typically preferred. This means the first letter of the first word is lowercase, and every other word's first letter is uppercase.
+
+camelCase Examples:
+
+* ```myNum = 123```
+* ```userService.getById(10);```
+* ```groceryList.add(new Grocery("Milk"));```
+
+## Primitive Types:
+
+* char - 1 byte integer
+* short - 2 byte integer
+* int - 4 byte integer
+* long - 8 byte integer
+* float - 4 byte decimal
+* double - 8 byte decimal
+* boolean - 1 byte true / false
+
 ## Useful Resources:
 
 https://godbolt.org/
