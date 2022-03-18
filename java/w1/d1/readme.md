@@ -9,7 +9,7 @@
 
 * Static Types vs Dynamic Types
 
-* Conventions (PascalCase, Reverse Domain Packages)
+* Naming Conventions
 
 * Types, Conditionals, Loops, and Operators
 
@@ -116,13 +116,13 @@ camelCase Examples:
 
 ## Primitive Types:
 
-* char - 1 byte integer
-* short - 2 byte integer
-* int - 4 byte integer
-* long - 8 byte integer
-* float - 4 byte decimal
-* double - 8 byte decimal
-* boolean - 1 byte true / false
+* char - 1 byte, 8 bits, integer - 0-255
+* short - 2 byte, 16 bits, integer 0-65535
+* int - 4 byte, 32 bits, integer 0-4294967296
+* long - 8 byte, 64 bits, integer 0-9223372036854775807
+* float - 4 byte, 32 bits, decimal
+* double - 8 byte, 64 bits, decimal
+* boolean - 1 byte, 8 bits, true / false
 
 ## Useful Resources:
 
