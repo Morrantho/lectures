@@ -1,42 +1,10 @@
-<style>
-*
-{
-	margin:0;
-	border:0;
-	padding:0;
-	outline:0;
-	box-sizing:border-box;
-}
-.grid{display:grid;}
-.center
-{
-	align-items:center;
-	justify-content:center;
-}
-.container
-{
-}
-.g1{gap:1rem;}
-.g2{gap:2rem;}
-.fr1{grid-template-columns:1fr;}
-.fr05{grid-template-columns:.5fr;}
-.fr025{grid-template-columns:.25fr;}
-h1
-{
-	border:0;
-}
-</style>
-
-<div class="grid center g2">
-	<div class="grid g2 fr05">
-		<img src="../../res/img/java_logo.png"/>
-	</div>
-	<h1>Week 1 Day 1 - Intro To Java</h1>
+<div align="center">
+	<img align="center" src="../../res/img/java_logo.png" width=128 />
 </div>
 
+# Week 1 Day 1 - Intro To Java
 
-
-## Topics:
+## Topics / Concepts:
 
 * Compiled VS Intepreted
 
@@ -58,9 +26,13 @@ h1
 
 ## Compiled VS Interpreted:
 
+### Interpreted:
+
 TL;DR Your code isn't binary and requires a host program / language to run.
 
 Interpreted languages are languages that DO NOT compile code to binary. They instead are programs themselves (Likely written in ASM, C, C++, Rust) that operate on source code as input. E.G. They require a host language to operate (Like parasites). The interpreter first performs lexical analysis which is the act of breaking up the source code input into "tokens" that represent keywords or actions to be processed by the parser in the next step. After lexing, the parse phase begins. This is where the source code is checked for grammatical problems and errors, and that it conforms to the language's rules. During parsing, the source code is also organized into a tree structure, typically referred to as an abstract syntax tree (A.S.T). After parsing, the interpreter has gathered enough information to execute the code it generated into the AST. The AST is then walked / travered / iterated, and the code is executed.
+
+### Compiled:
 
 TL;DR Your code is either binary, or close to it, and must be compiled with a compiler in order to run.
 
