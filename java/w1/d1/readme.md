@@ -103,4 +103,6 @@ https://javap.yawk.at
 
 http://ref.x86asm.net/coder64.html#x0F90
 
+https://www.asciitable.com/
+
 ## End Of Day: Cafe Java
