@@ -35,6 +35,10 @@ TL;DR Translates code into a machine and O.S. independant executable.
 
 The java virtual machine (JVM) lets us write code once and use that same code on any machine or operating system. The reason this is possible is because of JVM and an intermediate form of binary called bytecode upon compilation of a Java program. At this stage, we could take the resulting .class files / bytecode, and hand it off to Java / JVM on any machine or operating system and it would translate those same instructions to that machine's specific architecture. This means that the developers of Java and the JVM had to write code that would function on each operating system the same way the user intended without side effects. This means we don't have to learn how to write code for Windows, Linux, OSX, or any other platforms we intend our software to run on. Before Java, we would've had to write 3 separate programs each targeting the aforementioned platforms. With Java, we write that code once.
 
+<div align="center">
+	<img align="center" src="../../res/img/java_compilation.png" />
+</div>
+
 ## Compiled VS Interpreted:
 
 ### Interpreted:
@@ -84,6 +88,12 @@ public class Program
 	}
 };
 ```
+
+### Memory allocation in a nutshell:
+
+<div align="center">
+	<img align="center" src="../../res/img/alloc.png" />
+</div>
 
 ## Useful Resources:
 
