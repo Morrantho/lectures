@@ -9,7 +9,7 @@
 
 * Static Types vs Dynamic Types
 
-* PascalCase
+* Conventions (PascalCase, Reverse Domain Packages)
 
 * Types, Conditionals, Loops, and Operators
 
@@ -21,7 +21,13 @@
 
 * Hashmaps
 
-## End Of Day: Cafe Java
+## Why Java?
+
+* Compiled Language
+* Write One Run Anywhere
+* Enormous Standard Library
+* Object Oriented
+* Widely Used
 
 ## How Java Works - Java Virtual Machine (J.V.M.)
 
@@ -33,23 +39,21 @@ The java virtual machine (JVM) lets us write code once and use that same code on
 
 ### Interpreted:
 
-TL;DR Your code isn't machine code and requires a host program / language to run.
+TL;DR Your code requires a host language in order to run.
 
 Interpreted languages are languages that DO NOT compile code to machine code. They instead are programs themselves (Likely written in ASM, C, C++, Rust) that operate on source code as input. E.G. They require a host language to operate (Like parasites). The interpreter first performs lexical analysis which is the act of breaking up the source code input into "tokens" that represent keywords or actions to be processed by the parser in the next step. After lexing, the parse phase begins. This is where the source code is checked for grammatical problems and errors, and that it conforms to the language's rules. During parsing, the source code is also organized into a tree structure, typically referred to as an abstract syntax tree (A.S.T). After parsing, the interpreter has gathered enough information to execute the code it generated into the AST. The AST is then walked / travered / iterated, and the code is executed.
 
 ### Compiled:
 
-TL;DR Your code is either machine code, or close to it, and must be compiled with a compiler in order to run.
+TL;DR Your code must be compiled to machine code or close to it before it can run.
 
 Compiled languages are languages that DO compile code to machine code, or come close to it. ( Bytecode in Java's case ). This means there is an additional compilation step performed before the program can even execute or run. Compilation also involves lexical analysis and parsing, but is much more strict, since it must be converted to machine code (Not necessarily binary 1s and 0s). The compiler must be able to read each line of code and substitute what it believes to be the most optimal CPU instruction opcode equivalent. An opcode is a hexadecimal number that corresponds to an operation that the CPU must perform, such as the SUB instruction which corresponds to the hexadecimal value 0x28 on intel x86 processors. It must do this subsitution for all code written. After this compilation process, we can finally execute the raw machine code (or byte code via JVM in Java's case) as an executable process.
 
-## Static Types vs Dynamic Types
+## Static Types vs Dynamic Types - Variables
 
 TL;DR We must specify data types when creating variables, functions, etc.
 
-Most if not all compiled languages are statically typed. This means that when we create variables, functions, pass parameters to those functions, return from functions, etc, we must specify the exact type of data we are operating on, whether it be an integer, string, character, decimal, array, etc. This may seem like a monotonous waste of time coming from a dynamically typed language. However, it gives us much more control over RAM and how much space we are consuming and how much we actually require. It also gives us much more control over that data, as we can expect it to be in a specific format before operating on it. Supplying types to variables informs the compiler precisely how much space or RAM it must reserve and allocate to store data. In dynamically typed languages, this is left to the interpreter, so more often than not, it reserves much more RAM than needed, which is wasteful.
-
-## Variables
+Most if not all compiled languages are statically typed. This means that when we create variables, functions, pass parameters to those functions, return from functions, etc, we must specify the exact type of data we are operating on, whether it be an integer, string, character, decimal, array, etc. This may seem like a monotonous waste of time coming from a dynamically typed language. However, it gives us much more control over RAM and how much space we are consuming and how much we actually require. It also gives us much more control over that data, as we can expect it to be in a specific format before operating on it. Supplying types to variables informs the compiler precisely how much space or RAM it must reserve and allocate to store data. In dynamically typed languages, this is left to the interpreter, therefore we cannot guarantee how much space will be consumed, and it may consume more than we need.
 
 ### Javascript:
 
@@ -88,3 +92,5 @@ https://godbolt.org/
 https://javap.yawk.at
 
 http://ref.x86asm.net/coder64.html#x0F90
+
+## End Of Day: Cafe Java
