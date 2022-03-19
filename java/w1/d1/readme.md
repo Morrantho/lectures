@@ -1,24 +1,19 @@
 <div align="center">
 	<img align="center" src="../../res/img/java_logo.png" width=128 />
+	<hr>
 	<h1>Week 1 Day 1 - Intro To Java</h1>
 </div>
 
 ## Topics / Concepts:
 
 * Compiled vs Intepreted
-
 * Static Types vs Dynamic Types
-
 * Naming Conventions
-
 * Types, Conditionals, Loops, and Operators
-
+* Methods
 * Casting
-
 * Imports & Packages
-
 * Static Arrays, Dynamic Arrays
-
 * Hashmaps
 
 ## Why Java?
@@ -114,7 +109,9 @@ camelCase Examples:
 * ```userService.getById(10);```
 * ```groceryList.add(new Grocery("Milk"));```
 
-## Primitive Types:
+## Types:
+
+### Primitive Types:
 
 * char - 1 byte, 8 bits, integer - 0-255
 * short - 2 byte, 16 bits, integer 0-65535
@@ -123,6 +120,142 @@ camelCase Examples:
 * float - 4 byte, 32 bits, decimal
 * double - 8 byte, 64 bits, decimal
 * boolean - 1 byte, 8 bits, true / false
+
+### Object Types:
+
+* Character
+* Long
+* Integer
+* Double
+* Boolean
+* String
+* ArrayList
+* HashMap
+
+## Operators
+
+```java
+public class Program
+{
+	public static void main(String[] args)
+	{
+		int a = 100;
+		int b = 200;
+
+		System.out.println(a + b);
+		System.out.println(a - b);
+		System.out.println(a * b);
+		System.out.println(a / b);
+		System.out.println(a % b);
+		System.out.println(a > b);
+		System.out.println(a < b);
+		System.out.println(a <= b);
+		System.out.println(a >= b);
+		System.out.println(a == b);
+		System.out.println(a != b);
+	}
+};
+```
+
+## Conditionals
+
+```java
+public class Program
+{
+	public static void main(String[] args)
+	{
+		int a = 20;
+		int b = 30;
+
+		if( a > b )
+		{
+			System.out.println("A is Bigger!");
+		}
+		else if( a == b )
+		{
+			System.out.println("A is equal to B!");
+		}
+		else
+		{
+			System.out.println("B is Bigger!");
+		}
+
+		/* alternatively using a ternary: */
+		String result_string = a > b ? "A is bigger" : "B is bigger!";
+
+		System.out.println(result_string);
+	}
+}
+```
+
+## Loops
+
+```java
+public class Program
+{
+	public static void main(String[] args)
+	{
+		for(int i=0; i < 10; i++)
+		{
+			System.out.println(i*i);
+		}
+
+		int j = 1;
+		while(j < 20)
+		{
+			System.out.println( j );
+			j += 2;
+		}
+	}
+};
+```
+
+## Arrays
+
+```java
+public class Program
+{
+	public static void main(String[] args)
+	{
+		/* Declaration */
+		int[] my_nums;
+		/* Initialization */
+		my_nums = new int[5];
+		my_nums[0]=10;
+		my_nums[1]=20;
+		my_nums[2]=30;
+		my_nums[3]=40;
+		my_nums[4]=50;
+
+		for(int i=0;i<my_nums.length;i++)
+		{
+			System.out.println(my_nums[i]);
+		}
+		/* Declaration and initialization */
+		float[] my_floats = new float[3];
+		my_floats[0]=3.14;
+		my_floats[1]=1.23;
+		my_floats[2]=4.56;
+		/* Declaration, initialization, and */
+		/* assignment, without specifying a size. This size is determined by the number of elements we initially put in, 5. */
+		String[] my_groceries =
+		{
+			"Milk",
+			"Bread",
+			"Eggs",
+			"Bananas",
+			"Oranges"
+		};
+		/* Alternative for loop if we only care about values, not indices. */
+		for(String grocery: my_groceries)
+		{
+			System.out.println(grocery);
+		}
+	}
+};
+```
+
+## HashMaps
 
 ## Useful Resources:
 
