@@ -23,6 +23,7 @@
 * Modularization / Imports & Packages
 * Static Arrays, Dynamic Arrays
 * Hashmaps
+* Exceptions
 
 ## Why Java?
 
