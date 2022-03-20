@@ -6,13 +6,21 @@
 
 ## Topics / Concepts:
 
+### Part 1
+
+* Why Java?
+* How Java Works (J.V.M.)
 * Compiled vs Intepreted
+* Hello World
 * Static Types vs Dynamic Types
 * Naming Conventions
 * Types, Conditionals, Loops, and Operators
+
+### Part 2
+
 * Methods
 * Casting
-* Imports & Packages
+* Modularization / Imports & Packages
 * Static Arrays, Dynamic Arrays
 * Hashmaps
 
@@ -210,6 +218,72 @@ public class Program
 };
 ```
 
+## Methods
+
+```java
+public class Program
+{
+	public static void main(String[] args)
+	{
+		int sum = Program.add(10,20);
+		System.out.print(sum);
+	}
+
+	/* Static Method */
+
+	public static int add(int a,int b)
+	{
+		return a+b;
+	}
+};
+
+/* User.java */
+
+public class User
+{
+	private String name;
+	private String email;
+
+	/* Constructor */
+
+	public User(String _name,String email)
+	{
+		name=_name;
+		this.email=email;
+		Register();
+		Login();
+	}
+
+	/* Instance Methods */
+
+	public void Register()
+	{
+		System.out.println("Do database saving. Ensure email doesn't exist");
+	}
+
+	public void Login()
+	{
+		System.out.println("Check password and user existance");
+	}
+};
+```
+
+## Casting
+
+Casting is the act of attemping to change an object's type to another.
+
+```java
+public class Program
+{
+	public static void main(String[] args)
+	{
+		double pi = 3.14159;
+		int n = (int)pi;
+		System.out.println(n);
+	}
+};
+```
+
 ## Arrays
 
 ```java
@@ -255,7 +329,92 @@ public class Program
 };
 ```
 
+## ArrayLists
+
+```java
+import java.util.ArrayList;
+
+public class Program
+{
+	public static void main(String[] args)
+	{
+		ArrayList<Integer> nums=new ArrayList<Integer>();
+		nums.add(10);
+		nums.add(20);
+		nums.add(30);
+		nums.add(40);
+		nums.add(50);
+
+		Integer num = nums.get(2);
+		System.out.println(num);
+		/* Iterate V1 */
+		for(int i=0;i<nums.length;i++)
+		{
+			System.out.println(nums.get(i));
+		}
+		/* Iterate V2 */
+		for(Integer value:nums)
+		{
+			System.out.println(value);
+		}
+	}
+};
+```
+
 ## HashMaps
+
+```java
+import java.util.HashMap;
+
+public class Program
+{
+	public static void main(String[] args)
+	{
+		HashMap<String,String> map=new HashMap<String,String>();
+		map.put("name","Bobert");
+		map.put("email","bob@ert.com");
+		map.put("fav_hobby","Play Sportsball");
+
+		String val = map.get("email");
+		System.out.println(val);
+		
+		/* Iterate V1 */
+
+		for(Map.Entry<String,String> set:map.entrySet())
+		{
+			String key = set.getKey();
+			String value = set.getValue();
+			System.out.println(key+":"+value);
+		}
+
+		/* Iterate V2 */
+
+		for(String key:map.keySet())
+		{
+			System.out.println(key+":"+map.get(key));
+		}
+	}
+};
+```
+
+## Modularization / imports / packages
+
+Importing code from other libraries or sources is not only common in Java, but in every other language.
+
+Packages or modules in Java are really just folders with code in them. The package keyword reflects this directory structure.
+
+Most Java developers use the reverse domain naming convention for organizing their code base.
+
+This may look something like:
+
+Program.java:
+
+```java
+package com.codingdojo.myapp;
+```
+
+You can see that it looks like a URL in reverse. We can also determine where to look for this source code, since we know each word in the package name represents a folder. This means, that Program.java resides in the com/codingdojo/myapp folder.
+
 
 ## Useful Resources:
 
