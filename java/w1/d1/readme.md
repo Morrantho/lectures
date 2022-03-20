@@ -439,7 +439,10 @@ This may look something like:
 Program.java:
 
 ```java
-package com.codingdojo.myapp;
+package com.codingdojo.myapp; /* <- the package our Program.java resides in */
+/* Dependencies of our program */
+import java.util.ArrayList;
+import java.util.HashMap;
 ```
 
 You can see that it looks like a URL in reverse. We can also determine where to look for this source code, since we know each word in the package name represents a folder. This means, that Program.java resides in the com/codingdojo/myapp folder.
