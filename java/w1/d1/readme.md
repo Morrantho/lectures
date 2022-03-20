@@ -155,6 +155,7 @@ public class Program
 		System.out.println(a * b);
 		System.out.println(a / b);
 		System.out.println(a % b);
+
 		System.out.println(a > b);
 		System.out.println(a < b);
 		System.out.println(a <= b);
@@ -392,6 +393,34 @@ public class Program
 		for(String key:map.keySet())
 		{
 			System.out.println(key+":"+map.get(key));
+		}
+	}
+};
+```
+
+## Exceptions
+
+```java
+public class Program
+{
+	public static void main(String[] args)
+	{
+		int[] nums=new int[]
+		{
+			10,
+			20,
+			30,
+			40,
+			50
+		};
+
+		try
+		{
+			System.out.println(nums[10]);
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("OUT OF BOUNDS!");
 		}
 	}
 };
