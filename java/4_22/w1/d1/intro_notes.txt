@@ -1,0 +1,11 @@
+* Ensure "Java" platform access
+* Ensure Schedule Access
+* Brief Course / Week Overview
+* Lecture Recordings
+* Code Reviews
+* 90% Core Assignments
+* EOD Goals
+* Assignment Progress
+* Discord channel / TAs are here to help / Help channel
+* Github
+* Algos

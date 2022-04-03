@@ -73,3 +73,18 @@ list.Iterate(value=>console.log(value));
 // Bench.Mark(list.PushBack,test_data2);
 // Bench.Mark(list.PushBack,test_data3);
 // Bench.Mark(list.PushBackN,test_data4);
+
+/*
+	Group Activity: See whose CPU is the fastest.
+	Make a poll where students post their results.
+*/
+
+/* 	Uncomment if you dare */
+// function OwMyCPU()
+// {
+// 	for(let i=1;i<=10000;i++)
+// 	{
+// 		list.PushBack(i*i*i);
+// 	}
+// }
+// Bench.Mark(OwMyCPU);
