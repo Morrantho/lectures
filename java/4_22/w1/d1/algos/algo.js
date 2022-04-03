@@ -53,3 +53,14 @@ list.PushBack(test_data3);
 list.PushBackN(test_data4);
 /* Iterate our list, so we can see our node values */
 list.Iterate(value=>console.log(value));
+/* Expected output: */
+/*
+	123
+	234
+	345
+	111
+	222
+	333
+	444
+	555
+*/
