@@ -1,3 +1,5 @@
+let Bench=require("./Bench");
+
 class Node
 {
 	constructor(value)
@@ -64,3 +66,10 @@ list.Iterate(value=>console.log(value));
 	444
 	555
 */
+
+/* If you want to see how long your code takes to execute: */
+
+// Bench.Mark(list.PushBack,test_data1);
+// Bench.Mark(list.PushBack,test_data2);
+// Bench.Mark(list.PushBack,test_data3);
+// Bench.Mark(list.PushBackN,test_data4);
