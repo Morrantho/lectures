@@ -34,7 +34,7 @@ class List
 
 	/* Recursively determines whether the given value was found within the list. */
 	/* ( Returns a bool, true or false ) */
-	ContainsR(value)
+	ContainsR(node,value)
 	{
 		/* Your Code Here */
 		/* Call Me Recursively! */
@@ -49,7 +49,7 @@ class List
 
 	/* EXTRA / OPTIONAL */
 	/* Recursively finds and returns the largest number in the list. */
-	MaxR()
+	MaxR(node)
 	{
 		/* Your Code Here */
 	}
