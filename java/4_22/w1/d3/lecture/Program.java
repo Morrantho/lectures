@@ -18,9 +18,9 @@
 /* Morning Lecture: */
 /*****************************************************************************/
 
-/* What is an IDE? */
+/* What is an IDE? What does it stand for? */
 /*
-
+	
 
 
 
