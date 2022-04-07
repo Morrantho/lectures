@@ -90,15 +90,15 @@ list.Iterate(value=>console.log(value));
 	666
 */
 
-list.Prepend();
+list.Prepend(333,444);
 
 /* I'm a freebie, don't delete me! */
 list.Iterate(value=>console.log(value));
 /*
-	Expected Output after Prepend(333,222):
+	Expected Output after Prepend(333,444):
 	111
 	222
-	333 <- we basically put this back
+	333 <- 333 should be back
 	444
 	555
 	666
