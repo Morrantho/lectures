@@ -2,7 +2,11 @@
 /* Announcements */
 /*****************************************************************************/
 
+/* If STS is a problem for you, check this video: https://www.youtube.com/watch?v=kDOHlKWWObI */
 
+/* Mention Chat Legend */
+
+/* Mention Cheat Sheet */
 
 /*****************************************************************************/
 /* Morning Lecture */
