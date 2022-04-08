@@ -1,0 +1,106 @@
+/*****************************************************************************/
+/* Announcements */
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/* Morning Lecture */
+/*****************************************************************************/
+
+/* What is the request / response cycle? */
+
+/*
+
+*/
+
+/* How do we make a new SPRING BOOT project? */
+
+/*
+
+*/
+
+/* What is a Controller? */
+
+/*
+
+*/
+
+/* How do we tell our class that it should accept Requests and return Responses? */
+
+/*
+
+*/
+
+/* How do we tell our functions / methods that they should only process specific routes? */
+
+/*
+
+*/
+
+/* How do we accept and deal with Query parameters? */
+/* The ones that look like this: google.com?first=john&last=walton  */
+
+/*
+
+*/
+
+/* How do we accept variable routes such as: /users/123? */
+
+/*
+
+*/
+
+/* What is the difference between query parameters and path variables? */
+
+/*
+	
+*/
+
+/*****************************************************************************/
+/* Afternoon Lecture */
+/*****************************************************************************/
+
+/* What is a JSP, what will we use it for, and what does it stand for? */
+
+/*
+	
+*/
+
+/* What is JSTL and what does it allow us to do? */
+
+/*
+	
+*/
+
+
+/* What is the difference between @RestController and @Controller? */
+
+/*
+	
+*/
+
+/* What dependency do we need in our methods in order to render data to our JSPs? */
+
+/*
+	
+*/
+
+/* How do we do an if statement with JSTL tags on our JSP? */
+/* (We don't need this to complete Fruity Loops, but still useful) */
+
+/*
+	
+*/
+
+/* How do we do a for loop with JSTL tags on our JSP? */
+
+/*
+	
+*/
+
+/* How do we do add static content like css and js to our Spring App? */
+
+/*
+	
+*/
