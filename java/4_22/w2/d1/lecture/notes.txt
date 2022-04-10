@@ -1,0 +1,110 @@
+/*****************************************************************************/
+/* Announcements */
+/*****************************************************************************/
+
+TBD
+
+/*****************************************************************************/
+/* Today's App Goals */
+/*****************************************************************************/
+
+Make a mad libs esque game, where the user enter's
+form data in the form of nouns, verbs, and adjectives.
+
+We'll store the number of short stories they've attempted
+in a session.
+
+We'll then POST that to our server, process it, and render
+a new page with a custom generated short story based
+on their input.
+
+In the afternoon, we will will validate these inputs,
+ensuring they've abided by our game's rules, displaying
+errors to them if they've not done so. We'll also be sure
+to store their short story into session, so that we can 
+redirect them to a new route that will display the story.
+
+STRETCH GOAL:Store short stories as an ArrayList<String>
+into session, so that users can see their previous
+stories.
+
+/*****************************************************************************/
+/* Morning Lecture */
+/*****************************************************************************/
+
+/* What is the purpose of session storage? */
+
+/*
+	
+*/
+
+/* How do we use session in a route? */
+
+/*
+	
+*/
+
+/* How do we put data into session? */
+
+/*
+
+*/
+
+/* How do we get data out of session? */
+
+/*
+
+*/
+
+/* How can we clear a session entirely? */
+
+/*
+
+*/
+
+/* What is the difference between POST and GET Requests? */
+
+/*
+
+*/
+
+/* What attributes must we supply a form tag in order for */
+/* a server to process it's information? */
+
+/*
+
+*/
+
+/* When should we render templates during a POST route? */
+
+/*
+	
+*/
+
+/*****************************************************************************/
+/* Afternoon Lecture */
+/*****************************************************************************/
+
+/* How long do flash attributes persist for? */
+
+/*
+
+*/
+
+/* How do we use flash attributes in a route? */
+
+/*
+
+*/
+
+/* How do we use display flash attributes on a template? */
+
+/*
+
+*/
+
+/* How do we redirect a request to a different route? */
+
+/*
+
+*/
