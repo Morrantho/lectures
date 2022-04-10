@@ -60,7 +60,7 @@ function logarithmic(n)
 }
 /*****************************************************************************/
 /* O(n) - Linear
-/* Determines the number of bits the given number contains. */
+/* Determines whether the given number exists in the given array. */
 /* arr=[10,20,30,40,50], k=50, n=arr.length */
 /*****************************************************************************/
 function linear(arr,k)
@@ -86,7 +86,7 @@ function log_linear(arr)
 }
 /*****************************************************************************/
 /* O(n ^ 2) - Quadratic
-/* Determines the sum of all values in a 2d array. */
+/* Determines the sum of all values in the given 2d array. */
 /*
 	arr2d=
 	[
@@ -110,7 +110,7 @@ function quadratic(arr2d)
 }
 /*****************************************************************************/
 /* O(n ^ 3) - Cubic
-/* Determines the sum of all values in a 3d array. */
+/* Determines the sum of all values in the given 3d array. */
 /*
 	arr3d=
 	[
