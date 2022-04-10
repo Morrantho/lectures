@@ -3,19 +3,19 @@
 /*****************************************************************************/
 /* 		O(1)			|		Constant		|  		FASTEST				 */
 /*****************************************************************************/
-/* 		O(log n)		|		Logarithmic		|  							 */
+/* 		O(log N)		|		Logarithmic		|  							 */
 /*****************************************************************************/
-/* 		O(n)			|		Linear			|  							 */
+/* 		O(N)			|		Linear			|  							 */
 /*****************************************************************************/
-/* 		O(n log n)		|		Log Linear		|  							 */
+/* 		O(N log N)		|		Log Linear		|  							 */
 /*****************************************************************************/
-/* 		O(n^2)			|		Quadratic		|  							 */
+/* 		O(N^2)			|		Quadratic		|  							 */
 /*****************************************************************************/
-/* 		O(n^3)			|		Cubic			|  							 */
+/* 		O(N^3)			|		Cubic			|  							 */
 /*****************************************************************************/
-/* 		O(2^n)			|		Exponential		|  							 */
+/* 		O(2^N)			|		Exponential		|  							 */
 /*****************************************************************************/
-/* 		O(n!)			|		Factorial		|  		SLOWEST				 */
+/* 		O(N!)			|		Factorial		|  		SLOWEST				 */
 /*****************************************************************************/
 
 /* Big O Notation is merely a way to track the performance or memory */
@@ -26,27 +26,33 @@
 /* We normally look for the worst case scenario (Upper Bound) when talking */
 /* about run-time or space-time complexity. */
 
-/* Logarithms are the inverse to exponentiation. Much like addition */
-/* is the inverse of subtraction. */
+/* Logarithm recap: Logarithms are the inverse to exponentiation. */
+/* Much like addition is the inverse of subtraction. */
 
 /* If we write log2(128)=7, we can think of this as saying "How many 2s" */
 /* "do we need to multiply to get to 128?" 2*2*2*2*2*2*2=128 */
 
+/* With Big O notation, we drop constants, such as the exponent */
+/* of a base in a log, because we really only care about how an algorithm */
+/* performs. */
+
 /*****************************************************************************/
-/* O(1) - Constant
-/* Squares the given number */
-/* n=8 */
+/* Time Complexity: O(1) - Constant */
+/* Space Complxity: O(1) - Constant */
+/* N:8 */
+/* Description: Squares the given number */
 /*****************************************************************************/
 function constant(n)
 {
 	return n*n; /* 8*8=64 */
 }
 /*****************************************************************************/
-/* O(log n) - Logarithmic
-/* Determines the number of bits the given number contains. */
-/* This algorithm cuts the input or number of operations it must perform in */
+/* Time Complexity:  O(log N) - Logarithmic */
+/* Space Complexity: O(1) 	  - Constant */
+/* N:64 */
+/* Description: Determines the number of bits the given number contains. */
+/* Divides the input or number of operations it must perform in */
 /* half each iteration. */
-/* n=64 */
 /*****************************************************************************/
 function logarithmic(n)
 {
@@ -59,9 +65,10 @@ function logarithmic(n)
 	return bits;
 }
 /*****************************************************************************/
-/* O(n) - Linear
+/* Time Complexity:  O(N) - Linear */
+/* Space Complexity: O(1) - Constant */
+/* N:arr.length */
 /* Determines whether the given number exists in the given array. */
-/* arr=[10,20,30,40,50], k=50, n=arr.length */
 /*****************************************************************************/
 function linear(arr,k)
 {
@@ -72,21 +79,26 @@ function linear(arr,k)
 	return false;
 }
 /*****************************************************************************/
-/* O(n log n) - Log Linear
-/* Determines the number of bits of each number in the given array */
+/* Time Complexity:  O(N log N) - Log Linear */
+/* Space Complexity: O(N) - Linear */
+/* N:arr.length */
+/* Description: Determines the number of bits of each number in the given array */
 /* Runs our logarithmic bit calculating function for each element in the array.*/
-/* arr=[10,20,30,40,50], n=arr.length */
 /*****************************************************************************/
 function log_linear(arr)
 {
+	let new_arr=[];
 	for(let i=0;i<arr.length;i++)
 	{
-		arr[i]=logarithmic(arr[i]);
+		new_arr[i]=logarithmic(arr[i]);
 	}
+	return new_arr;
 }
 /*****************************************************************************/
-/* O(n ^ 2) - Quadratic
-/* Determines the sum of all values in the given 2d array. */
+/* Time Complexity:  O(N^2) - Quadratic */
+/* Space Complexity: O(1)   - Constant */
+/* N:arr.length */
+/* Description:Determines the sum of all values in the given 2d array. */
 /*
 	arr2d=
 	[
@@ -109,7 +121,9 @@ function quadratic(arr2d)
 	return 0;
 }
 /*****************************************************************************/
-/* O(n ^ 3) - Cubic
+/* Time Complexity:  O(N^3) - Cubic */
+/* Space Complexity: O(1)   - Constant */
+/* N:arr.length */
 /* Determines the sum of all values in the given 3d array. */
 /*
 	arr3d=
@@ -149,9 +163,10 @@ function cubic(arr3d)
 	return sum;
 }
 /*****************************************************************************/
-/* O(2 ^ N) - Exponential
-/* Calculates the Nth number of the fibonacci sequence. */
-/* n=5 */
+/* Time Complexity:  O(2^N) - Exponential */
+/* Space Complexity: O(1)   - Constant */
+/* N:5 */
+/* Description: Calculates the Nth number of the fibonacci sequence. */
 /*****************************************************************************/
 function exponential(n)
 {
@@ -159,11 +174,12 @@ function exponential(n)
 	return exponential(n-1)+exponential(n-2);
 }
 /*****************************************************************************/
-/* O(N!) - Factorial
+/* Time Complexity:  O(N!) - Factorial */
+/* Space Complexity: O(1)  - Constant */
+/* N:5 */
 /* Counts to N, calling itself each iteration and passing N-1 to the next call */
 /* One example of this might be the traveling salesman problem. Where you need */
-/* to find all paths to a destination from a starting point. */
-/* n=5 */
+/* to find all permutations to a destination from a starting point. */
 /*****************************************************************************/
 function factorial(n)
 {
@@ -173,4 +189,4 @@ function factorial(n)
 		factorial(n-1);
 	}
 }
-/* factorial(5); */
+/* factorial(10); // Uncomment me if you dare */
