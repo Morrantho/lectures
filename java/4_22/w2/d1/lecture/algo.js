@@ -42,7 +42,7 @@ class BST
 	}
 
 	/* I'm just here to print your BST In-Order. */
-	/* Could use me as an example to solve above algos. */
+	/* Could use me as an example to solve above algos, since I'm recursive and all. */
 	Log(node,fmt="")
 	{
 		if(!node) return fmt;

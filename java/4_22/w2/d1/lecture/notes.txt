@@ -35,50 +35,61 @@ stories.
 /* What is the purpose of session storage? */
 
 /*
-	
+	Storing info
+	Cookies
+	Persistence of data
+	Lets us persist info across requests.
 */
 
 /* How do we use session in a route? */
 
 /*
-	
+	Write: HttpSession session inside a function
+	that processes a request.
 */
 
 /* How do we put data into session? */
 
 /*
-
+	session.setAttribute("key",value);
 */
 
 /* How do we get data out of session? */
 
 /*
-
+	Integer count=session.getAttribute("key");
 */
 
 /* How can we clear a session entirely? */
 
 /*
-
+	session.invalidate();
 */
 
 /* What is the difference between POST and GET Requests? */
 
 /*
+	Post = Sending Information (Securely)
+	Get  = Pulling info
 
+	Post send info get retrieves
+
+	Get is PUBLIC and ANYONE can see it in the URL.
 */
 
 /* What attributes must we supply a form tag in order for */
 /* a server to process it's information? */
 
 /*
-
+	<form action="/madlibs" method="POST" >
+		<input type="submit" value="Make Story" />
+	</form>
 */
 
 /* When should we render templates during a POST route? */
 
 /*
-	
+	NEVER, ALWAYS REDIRECT!	
 */
 
 /*****************************************************************************/
