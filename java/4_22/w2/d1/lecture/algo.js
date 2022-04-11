@@ -56,7 +56,7 @@ class BST
 /* Code Tests Below */
 /*****************************************************************************/
 let bst=new BST();
-console.log(bst.IsEmpty()) /* Expected: true */
+console.log(bst.IsEmpty()) 			/* Expected: true */
 
 bst.root=new BSTNode(100);
 bst.root.left=new BSTNode(50);
@@ -69,6 +69,6 @@ bst.root.right.left=new BSTNode(125);
 bst.root.right.right=new BSTNode(175);
 
 // console.log(bst.Log(bst.root)); /* Uncomment me if you want to see your tree */
-console.log(bst.IsEmpty()) /* Expected: false */
-console.log(bst.MinR());   /* Expected: 25 */
-console.log(bst.MaxR());   /* Expected: 175 */
+console.log(bst.IsEmpty()) 		   /* Expected: false */
+console.log(bst.MinR(bst.root));   /* Expected: 25 */
+console.log(bst.MaxR(bst.root));   /* Expected: 175 */
