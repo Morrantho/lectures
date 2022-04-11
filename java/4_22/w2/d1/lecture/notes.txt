@@ -99,23 +99,27 @@ stories.
 /* How long do flash attributes persist for? */
 
 /*
-
+	One redirect
 */
 
 /* How do we use flash attributes in a route? */
 
 /*
-
+	RedirectAttributes redirectAttributes
 */
 
 /* How do we use display flash attributes on a template? */
 
 /*
+	The same way that we output data from Model
+	attributes
+	
+	${your_flash_msg}
 
 */
 
 /* How do we redirect a request to a different route? */
 
 /*
-
+	return "redirect:/"
 */

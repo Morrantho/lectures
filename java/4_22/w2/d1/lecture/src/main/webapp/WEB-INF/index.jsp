@@ -15,13 +15,18 @@
 <body>
 	<h1>I'm a Template</h1>
 	
-	<h1>Number Of User Submitted Stories: ${num_stories}</h1>
+	<h1>Number Of User Submitted Stories: ${stories.size()}</h1>
 	
-	<h1>${story}</h1>
+	<c:forEach items="${stories}" var="story" >
+		<h1>${story}</h1>
+	</c:forEach>
 	
 	<form action="/madlibs" method="POST">
+		<p class="err">${verb_err}</p>
 		<input placeholder="Verb" type="text" name="verb" />
+		<p class="err">${adj_err}</p>
 		<input placeholder="Adjective" type="text" name="adjective" />
+		<p class="err">${adverb_err}</p>
 		<input placeholder="Adverb" type="text" name="adverb" />
 
 		<input type="submit" value="Create Mad Lib" />
