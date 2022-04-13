@@ -36,7 +36,8 @@ public class SongService
 	// R
 	public ArrayList<Song> ReadAll()
 	{
-		return (ArrayList<Song>)songRepository.findAll();
+		ArrayList<Song> songs=(ArrayList<Song>)songRepository.findAll();
+		return songs;
 	}
 	
 	//	U.

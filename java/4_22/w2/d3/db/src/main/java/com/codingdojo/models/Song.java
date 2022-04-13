@@ -59,12 +59,12 @@ public class Song
 		this.genre = genre;
 	}
 
-	@NotNull
+	@Size(min=1,max=255,message="Song title cannot be blank!")
 	private String song_title;
 
-	@NotNull
+	@Size(min=1,max=255,message="Artist name cannot be blank!")
 	private String artist_name;
 
-	@Size(min=8,max=255,message="Genre must be between 8-255 characters!")
+	@Size(min=3,max=255,message="Genre must be between 3-255 characters!")
 	private String genre;
 };

@@ -14,29 +14,11 @@
 </head>
 <body>
 	<div class="container p2 grid gap2">
-		<div class="card">
-			<div class="card_head">
-				<h1 class="col_white1">All Songs</h1>
-			</div>
-			
-			<div class="card_body">
-				<c:forEach items="${songs}" var="i" >
-					<div>
-						<p><a href="/song/${i.id}">${i.artist_name}</a></p>						
-						<p>${i.song_title}</p>			
-						<p>${i.genre}</p>
-						<form action="/song/${i.id}/delete" method="POST">
-							<input type="submit" value="Delete Song!"/>
-						</form>
-						<p><a href="/song/${i.id}/edit">Edit</a></p>
-					</div>
-				</c:forEach>
-			</div>
-		</div>
+		<p>${song.id}</p>
 	
-		<form:form class="card" action="/song" method="POST" modelAttribute="song" >
+		<form:form class="card" action="/song/${song.id}/update" method="POST" modelAttribute="song" >
 			<div class="card_head">
-				<h1 class="col_white1">Add Song</h1>
+				<h1 class="col_white1">Edit Song</h1>
 			</div>
 			
 			<div class="card_body">
