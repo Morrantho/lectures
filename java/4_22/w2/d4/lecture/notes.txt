@@ -2,7 +2,19 @@
 /* Announcements */
 /*****************************************************************************/
 
-Activity Day @ 11:00AM CST (Noon for me. It's only an hour behind, the math isn't that hard you know.)
+* Please fill out surveys if you haven't already! Let us know how we're doing
+
+and what we can do to improve! Your feedback is invaluable, I wan't to improve.
+
+* Activity Day @ 12:00AM CST
+
+* Meeting @ 4:00 CST
+
+* Move evening lecture to 2:00 CST
+
+* 3:00 CST Tech Talk
+
+https://www.google.com/url?q=https://codingdojo.zoom.us/j/89044293971&sa=D&source=calendar&ust=1649636763890638&usg=AOvVaw2lHPV-8NcHUIo9WdG9bFip
 
 /*****************************************************************************/
 /* Today's App Goals */
@@ -31,45 +43,93 @@ When creating a song, have the ability to select the artist it belongs to.
 /* One To Many Relationship? */
 
 /*
-
+	@OneToMany
 */
 
 /* What is fetchtype LAZY vs fetchtype EAGER? */
 
 /*
+	Eager is fast
+	Lazy is slow
+	
+	Lazy=When Necessary
+	Eager=Now
 
+	Lazy=Doesn't perfrm a SQL Join until you use the member variable.
+	Eager=Always performs a SQL Join no matter the circumstance.
+
+	LAZY = fetch when needed
+	EAGER = fetch immediately
 */
 
 /* What does the "name" attribute of the @JoinColumn annotation reference? */
 
 /*
+	@JoinColumn(name="dojo_id")
+	 
+	Maps the foreign key
 	
+	The foreign key name
+
+	select * from dojos
+	join ninjas on
+	ninjas.id=dojo.ninja_id;
+	
+	select * from ninjas
+	join dojos on
+	dojos.id=ninja.dojo_id;
 */
 
 /* What should the TYPE be that we are storing in our Song model? */
 
 /*
+	class Artist
+	{
+		@OneToMany()
+		List<Song> songs;
+	};
 	
+
+	class Song
+	{
+	
+		@ManyToOne()	
+		Artist artist;
+	};
 */
 
 /* What annotation must we supply our "Artist" model in order to create a */
 /* One To Many Relationship? */
 
 /*
-
+	@OneToMany()
 */
 
 /* What does the "mappedBy" attribute in a @OneToMany annotation represent? */
 /* One To Many Relationship? */
 
 /*
-
+	It is also a foreign key
+	
+	class Artist
+	{
+		@OneToMany(mappedBy="artist",fetch=FetchType.LAZY)
+		List<Song> songs;
+	};
+	
+	class Song
+	{
+	
+		@ManyToOne(fetch=FetchType.LAZY)
+		@JoinColumn(name="artist_id")
+		Artist artist;
+	};
 */
 
 /* What should the TYPE be that we are storing in our Artist model? */
 
 /*
-
+	List<Song> songs;
 */
 
 /*****************************************************************************/

@@ -1,10 +1,12 @@
 package com.codingdojo.models;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -39,16 +41,6 @@ public class Song
 		this.song_title = song_title;
 	}
 
-	public String getArtist_name()
-	{
-		return artist_name;
-	}
-
-	public void setArtist_name(String artist_name)
-	{
-		this.artist_name = artist_name;
-	}
-
 	public String getGenre()
 	{
 		return genre;
@@ -59,12 +51,21 @@ public class Song
 		this.genre = genre;
 	}
 
+	public Artist getArtist() {
+		return artist;
+	}
+
+	public void setArtist(Artist artist) {
+		this.artist = artist;
+	}
+
 	@Size(min=1,max=255,message="Song title cannot be blank!")
 	private String song_title;
 
-	@Size(min=1,max=255,message="Artist name cannot be blank!")
-	private String artist_name;
-
 	@Size(min=3,max=255,message="Genre must be between 3-255 characters!")
 	private String genre;
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="not_artist_id")
+	private Artist artist;
 };

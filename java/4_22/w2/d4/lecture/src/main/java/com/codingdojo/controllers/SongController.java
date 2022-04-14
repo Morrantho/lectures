@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.codingdojo.models.Song;
+import com.codingdojo.services.ArtistService;
 import com.codingdojo.services.SongService;
 
 @Controller
@@ -19,10 +20,17 @@ public class SongController
 {
 	@Autowired
 	private SongService songService;
+	@Autowired
+	private ArtistService artistService;
 	
-	public SongController(SongService songService)
+	public SongController
+	(
+		SongService songService,
+		ArtistService artistService
+	)
 	{
 		this.songService=songService;
+		this.artistService=artistService;
 	}
 	
 	@GetMapping("/song")
@@ -30,6 +38,7 @@ public class SongController
 	{
 		model.addAttribute("song",new Song());
 		model.addAttribute("songs",songService.ReadAll());
+		model.addAttribute("artists",artistService.ReadAll());
 		return "song_new";
 	}
 	

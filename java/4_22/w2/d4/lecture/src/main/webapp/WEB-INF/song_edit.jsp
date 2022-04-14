@@ -9,13 +9,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
-	<div class="container p2 grid gap2">
-		<p>${song.id}</p>
-	
+	<div class="container p2 grid gap2">	
 		<form:form class="card" action="/song/${song.id}/update" method="POST" modelAttribute="song" >
 			<div class="card_head">
 				<h1 class="col_white1">Edit Song</h1>
@@ -24,11 +22,13 @@
 			<div class="card_body">
 				<form:errors class="col_red" path="song_title" />
 				<form:input placeholder="Song Title" path="song_title" />
-				<form:errors class="col_red" path="artist_name" />
-				<form:input placeholder="Artist Name" path="artist_name" />
+
 				<form:errors class="col_red" path="genre" />
 				<form:input placeholder="Genre" path="genre" />	
-				<input class="btn_submit" type="submit" value="Add Song" />
+
+				<input class="btn_submit" type="submit" value="Edit Song" />
+
+				<a href="/song">Back</a>
 			</div>
 		</form:form>
 	</div>
