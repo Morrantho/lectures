@@ -102,7 +102,7 @@ public class SongController
 		return "redirect:/song";
 	}	
 	
-	@PostMapping("/song/{id}/delete")
+	@GetMapping("/song/{id}/delete")
 	public String song_delete
 	(
 		@PathVariable("id") Long id

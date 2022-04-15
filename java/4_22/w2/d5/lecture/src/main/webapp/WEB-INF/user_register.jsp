@@ -26,38 +26,22 @@
 	</div>
 
 	<div class="container p2 grid gap2">
-		<div class="card">
+		<form:form class="card" action="/register" method="POST" modelAttribute="user" >
 			<div class="card_head">
-				<h1 class="col_white1">All Artists</h1>
-			</div>
-			
-			<div class="card_body grid">
-				<c:forEach items="${artists}" var="i" >
-					<div class="card">
-						<div class="card_head">
-							<h1 class="col_white1">${i.name}</h1>
-						</div>
-						<div class="card_body">
-							<p>Nationality: ${i.nationality}</p>
-						</div>
-					</div>
-				</c:forEach>
-			</div>
-		</div>
-	
-		<form:form class="card" action="/artist" method="POST" modelAttribute="artist" >
-			<div class="card_head">
-				<h1 class="col_white1">Add Artist</h1>
+				<h1 class="col_white1">Register</h1>
 			</div>
 			
 			<div class="card_body">
-				<form:errors class="col_red" path="name" />
-				<form:input placeholder="Artist Name" path="name" />
+				<form:errors class="col_red" path="email" />
+				<form:input placeholder="Email" path="email" />
 				
-				<form:errors class="col_red" path="nationality" />
-				<form:input placeholder="Artist Nationality" path="nationality" />
+				<form:errors class="col_red" path="password" />
+				<form:input placeholder="Password" path="password" />
+
+				<form:errors class="col_red" path="confirm" />
+				<form:input placeholder="Password Confirmation" path="confirm" />
 				
-				<input class="btn_submit" type="submit" value="Add Artist" />
+				<input class="btn_submit" type="submit" value="Register" />
 			</div>
 		</form:form>
 	</div>

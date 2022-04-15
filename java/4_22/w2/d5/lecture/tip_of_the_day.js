@@ -1,6 +1,10 @@
 /* Use vscode debugger for algos! */
+
 /* if you don't have node js installed, you can download it here: */
+/* *Gives you a head start for MERN anyways* */
 /* https://nodejs.org/en/download/ */
+
+/* Who has used a debugger before? */
 
 /* 1. Set a breakpoint */
 /* 2. Click the debugger tab in VsCode */

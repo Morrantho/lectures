@@ -12,11 +12,13 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<script type="text/javascript" src="/js/main.js"></script>
 </head>
-<body>
+<body class="bg_white2">
 	<div class="grid bg_blue">
 		<div class="container grid p2 col2">
 			<div></div>
-			<div class="grid col2 gap2">
+			<div class="flex col2 gap2">
+				<a class="col_white1" href="/artist">Artists</a>
+				<a class="col_white1" href="/song">Songs</a>
 				<a class="col_white1" href="/login">Login</a>
 				<a class="col_white1" href="/register">Register</a>
 			</div>
@@ -36,8 +38,8 @@
 				<form:errors class="col_red" path="genre" />
 				<form:input placeholder="Genre" path="genre" />	
 
-				<form:select path="artist" value="${i.artist.id}" >
-					<c:forEach items="${artists}" var="i" >
+				<form:select path="artist" >
+					<c:forEach items="${artists}" var="i" >					
 						<c:if test="${i.id==song.artist.id}">
 							<form:option value="${i.id}" selected="true" >${i.name}</form:option>
 						</c:if>

@@ -12,11 +12,13 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<script type="text/javascript" src="/js/main.js"></script>
 </head>
-<body>
+<body class="bg_white2">
 	<div class="grid bg_blue">
 		<div class="container grid p2 col2">
 			<div></div>
-			<div class="grid col2 gap2">
+			<div class="flex col2 gap2">
+				<a class="col_white1" href="/artist">Artists</a>
+				<a class="col_white1" href="/song">Songs</a>
 				<a class="col_white1" href="/login">Login</a>
 				<a class="col_white1" href="/register">Register</a>
 			</div>
@@ -39,9 +41,8 @@
 						<div class="card_body">						
 							<p>Title: ${i.song_title}</p>
 							<p>Genre: ${i.genre}</p>
-							<form action="/song/${i.id}/delete" method="POST">
-								<input type="submit" value="Delete Song!"/>
-							</form>
+
+							<p><a href="/song/${i.id}/delete">Delete</a></p>
 							<p><a href="/song/${i.id}/edit">Edit</a></p>
 						</div>
 					</div>
