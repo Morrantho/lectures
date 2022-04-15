@@ -28,6 +28,7 @@
 .align_center{align-items:center;}
 .col1{grid-template-columns:1fr;}
 .col2{grid-template-columns:1fr auto;}
+.col22{grid-template-columns:1fr auto;}
 .block{display:block;}
 
 .bg_red{background-color:#e74c3c;}

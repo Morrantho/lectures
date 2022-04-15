@@ -80,6 +80,7 @@ public class SongController
 		Song song=songService.ReadOne(id);
 		if(song==null) return "redirect:/song";
 		model.addAttribute("song",songService.ReadOne(id));
+		model.addAttribute("artists",artistService.ReadAll());
 		return "song_edit";
 	}	
 	

@@ -13,10 +13,21 @@
 	<script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
+	<div class="grid bg_blue">
+		<div class="container grid p2 col2">
+			<div></div>
+			<div class="grid col2 gap2">
+				<a class="col_white1" href="/login">Login</a>
+				<a class="col_white1" href="/register">Register</a>
+			</div>
+		</div>
+	</div>
+
 	<div class="container p2 grid gap2">
 		<div class="card">
-			<div class="card_head">
-				<h1 class="col_white1"></h1>
+			<div class="card_head grid col2 align_center justify_center">
+				<h1 class="col_white1">${song.artist.name}</h1>
+				<p class="col_white1">${song.artist.nationality}</p>
 			</div>
 			
 			<div class="card_body">
