@@ -1,5 +1,6 @@
 package com.codingdojo.controllers;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.codingdojo.models.Song;
 import com.codingdojo.services.ArtistService;
 import com.codingdojo.services.SongService;
+import com.codingdojo.services.UserService;
 
 @Controller
 public class SongController
@@ -22,20 +24,25 @@ public class SongController
 	private SongService songService;
 	@Autowired
 	private ArtistService artistService;
+	@Autowired
+	private UserService us;
 	
 	public SongController
 	(
 		SongService songService,
-		ArtistService artistService
+		ArtistService artistService,
+		UserService userService
 	)
 	{
 		this.songService=songService;
 		this.artistService=artistService;
+		this.us=userService;
 	}
 	
 	@GetMapping("/song")
-	public String song_new(Model model)
+	public String song_new(Model model,HttpSession session)
 	{
+		if(!us.IsLoggedIn(session)) return "redirect:/login";
 		model.addAttribute("song",new Song());
 		model.addAttribute("songs",songService.ReadAll());
 		model.addAttribute("artists",artistService.ReadAll());
@@ -47,9 +54,11 @@ public class SongController
 	(
 		@Valid @ModelAttribute("song") Song song,
 		BindingResult res,
-		Model model
+		Model model,
+		HttpSession session
 	)
 	{
+		if(!us.IsLoggedIn(session)) return "redirect:/login";
 		if(res.hasErrors())
 		{
 			model.addAttribute("songs",songService.ReadAll());
@@ -63,9 +72,11 @@ public class SongController
 	public String song_show
 	(
 		@PathVariable("id") Long id,
-		Model model
+		Model model,
+		HttpSession session
 	)
 	{
+		if(!us.IsLoggedIn(session)) return "redirect:/login";		
 		model.addAttribute("song",songService.ReadOne(id));
 		return "song_show";
 	}
@@ -74,9 +85,11 @@ public class SongController
 	public String song_edit
 	(
 		@PathVariable("id") Long id,
-		Model model
+		Model model,
+		HttpSession session
 	)
 	{
+		if(!us.IsLoggedIn(session)) return "redirect:/login";		
 		Song song=songService.ReadOne(id);
 		if(song==null) return "redirect:/song";
 		model.addAttribute("song",songService.ReadOne(id));
@@ -90,9 +103,11 @@ public class SongController
 		@Valid @ModelAttribute("song") Song song,
 		BindingResult res,
 		Model model,
-		@PathVariable("id") Long id
+		@PathVariable("id") Long id,
+		HttpSession session
 	)
 	{		
+		if(!us.IsLoggedIn(session)) return "redirect:/login";		
 		if(res.hasErrors())
 		{
 			System.out.println("HAS ERRORS");
@@ -105,9 +120,11 @@ public class SongController
 	@GetMapping("/song/{id}/delete")
 	public String song_delete
 	(
-		@PathVariable("id") Long id
+		@PathVariable("id") Long id,
+		HttpSession session
 	)
 	{
+		if(!us.IsLoggedIn(session)) return "redirect:/login";		
 		songService.Delete(id);
 		return "redirect:/song";
 	}

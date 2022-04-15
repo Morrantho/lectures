@@ -19,7 +19,14 @@
 			<div class="flex col2 gap2">
 				<a class="col_white1" href="/artist">Artists</a>
 				<a class="col_white1" href="/song">Songs</a>
-				<a class="col_white1" href="/login">Login</a>
+
+				<c:if test="${user_id!=null}">
+					<a class="col_white1" href="/logout">Logout</a>
+				</c:if>
+				<c:if test="${user_id==null}">
+					<a class="col_white1" href="/login">Login</a>
+				</c:if>
+
 				<a class="col_white1" href="/register">Register</a>
 			</div>
 		</div>
@@ -39,16 +46,19 @@
 				<form:input placeholder="Genre" path="genre" />	
 
 				<form:select path="artist" >
-					<c:forEach items="${artists}" var="i" >					
-						<c:if test="${i.id==song.artist.id}">
-							<form:option value="${i.id}" selected="true" >${i.name}</form:option>
-						</c:if>
-						<c:if test="${i.id!=song.artist.id}">
-							<form:option value="${i.id}">${i.name}</form:option>
-						</c:if>	
+					<c:forEach items="${artists}" var="i" >						
+						<c:choose>
+							<c:when test="${i.id==song.artist.id}">
+								<form:option value="${i.id}" selected="true" >${i.name}</form:option>
+							</c:when>
+					
+							<c:otherwise>
+								<form:option value="${i.id}">${i.name}</form:option>
+							</c:otherwise>
+						</c:choose>
 					</c:forEach>
-				</form:select>				
-
+				</form:select>
+	
 				<input class="btn_submit" type="submit" value="Edit Song" />
 
 				<a href="/song">Back</a>

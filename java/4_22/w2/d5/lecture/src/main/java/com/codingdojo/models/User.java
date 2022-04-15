@@ -5,8 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Transient;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -16,7 +19,7 @@ public class User
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
-    @NotEmpty(message="Email is required!")
+	@NotEmpty(message="Email is required!")
     @Email(message="Please enter a valid email!")
 	private String email;
 

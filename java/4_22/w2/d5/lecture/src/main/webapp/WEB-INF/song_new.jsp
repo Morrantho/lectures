@@ -19,7 +19,12 @@
 			<div class="flex col2 gap2">
 				<a class="col_white1" href="/artist">Artists</a>
 				<a class="col_white1" href="/song">Songs</a>
-				<a class="col_white1" href="/login">Login</a>
+				<c:if test="${user_id!=null}">
+					<a class="col_white1" href="/logout">Logout</a>
+				</c:if>
+				<c:if test="${user_id==null}">
+					<a class="col_white1" href="/login">Login</a>
+				</c:if>
 				<a class="col_white1" href="/register">Register</a>
 			</div>
 		</div>
