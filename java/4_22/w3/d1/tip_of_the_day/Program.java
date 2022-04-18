@@ -2,7 +2,7 @@ import java.util.function.Function;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/* Java has lambdas too you know. */
+/* Java has lambdas / arrow / anonymous functions too you know... */
 
 public class Program
 {
