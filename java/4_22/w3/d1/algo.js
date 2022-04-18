@@ -27,9 +27,19 @@ class MinHeap
 
 	Log()
 	{
-		let fmt="[";
-		for(let i=1;i<this.data.length;i++) fmt+=this.data[i]+",";
-		fmt=fmt.substring(0,fmt.length-1)+"]";
+		let fmt="";
+		let len=this.data.length-1;
+		let tabs=0;
+		for(;len;len>>=1,tabs++){}
+		for(let i=1;i<this.data.length;i<<=1,tabs--)
+		{
+			let to=(i<<1)-1;
+
+			for(let j=0;j<to;j++)
+			{
+
+			}
+		}
 		console.log(fmt);
 	}
 };

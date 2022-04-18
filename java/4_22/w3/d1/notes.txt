@@ -2,7 +2,13 @@
 Announcements - Week 4 Day 1
 *******************************************************************************
 
-* Windows had a meltdown Friday, got fed up and reformatted to Linux. Life is good again!
+* Mic Test
+
+* Mid Track Surveys: https://login.codingdojo.com/dashboard/mid-stack-survey
+
+* Instructor Chris is away teaching Web Fundamentals!
+
+* PC / Windows had a meltdown Friday, reformatted to Linux. Life is good again!
 
 * STS is not abiding for me, so hope you don't mind that we use VsCode today :/
 
@@ -34,9 +40,35 @@ Not many questions today! Unless you have some! (Hope ya do!)
 
 What 3 annotations must we use to implement a Many To Many relationship?
 
+@ManyToMany(fetch=FetchType.LAZY) <- Tells spring we want a N:N relationship.
+
+Artist.java:
+
+@JoinTable(
+	name="artists_songs", <- Middle / N:N  table name
+	joinColumn=@JoinColumn(name="artist_id"), <- Foreign Key 1
+	inverseJoinColumn=@JoinColumn(name="song_id") <- Foreign Key 2
+)
+private List<Song> songs;
+
+Song.java:
+
+@JoinTable(
+	name="artists_songs", <- Middle / N:N  table name
+	joinColumn=@JoinColumn(name="song_id"),
+	inverseJoinColumn=@JoinColumn(name="artist_id")
+)
+private List<Artist> artists;
+
 What 3 properties must we supply the @JoinTable annotation?
 
+name="artists_songs" <- middle table name
+joinColumn=@JoinColumn(name="artist_id") <- first foreign key name
+inverseJoinColumn=@JoinColumn(name="song_id") <- second foreign key
+
 What model holds the many / List<> side?
+
+Both! Trick Question!
 
 *******************************************************************************
 Afternoon Lecture

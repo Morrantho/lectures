@@ -49,7 +49,7 @@ public class UserController
 	)
 	{
 		if(result.hasErrors()) return "user_register";
-		User errors=userService.register(user,result);
+		User errors=userService.Register(user,result);
 		if(errors==null) return "user_register";
 		return "redirect:/login";
 	}
@@ -71,9 +71,8 @@ public class UserController
 	)
 	{
 		if(result.hasErrors()) return "user_login";
-		User db_user=userService.login(user,result);
+		User db_user=userService.Login(user,result,session);
 		if(db_user==null) return "user_login";
-		session.setAttribute("user_id",db_user.getId());
 		return "redirect:/";
 	}
 };

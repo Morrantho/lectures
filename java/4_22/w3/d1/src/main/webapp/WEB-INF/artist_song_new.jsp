@@ -20,12 +20,14 @@
 			<div class="flex col2 gap2">
 				<a class="col_white1" href="/artist">Artists</a>
 				<a class="col_white1" href="/song">Songs</a>
+
 				<c:if test="${user_id!=null}">
 					<a class="col_white1" href="/logout">Logout</a>
 				</c:if>
 				<c:if test="${user_id==null}">
 					<a class="col_white1" href="/login">Login</a>
 				</c:if>
+
 				<a class="col_white1" href="/register">Register</a>
 			</div>
 		</div>
@@ -34,40 +36,41 @@
 	<div class="container p2 grid gap2">
 		<div class="card">
 			<div class="card_head">
-				<h1 class="col_white1">All Songs</h1>
+				<h1 class="col_white1">All Artists and Songs</h1>
 			</div>
 			
 			<div class="card_body grid">
-				<c:forEach items="${songs}" var="i" >
+				<c:forEach items="${artists_songs}" var="i" >
 					<div class="card">
-						<div class="card_head bg_red grid col2 justify_center align_center">
-							<h1><a class="col_white1" href="/song/${i.id}">${i.song_title}</a></h1>
-							<p class="col_white1"></p>
+						<div class="card_head">
+							<h1 class="col_white1">${i.song.song_title}</h1>
 						</div>
 						<div class="card_body">
-							<p>Genre: ${i.genre}</p>
-
-							<p><a href="/song/${i.id}/delete">Delete</a></p>
-							<p><a href="/song/${i.id}/edit">Edit</a></p>
+							<p>${i.artist.name}</p>
 						</div>
 					</div>
 				</c:forEach>
 			</div>
 		</div>
 	
-		<form:form class="card" action="/song" method="POST" modelAttribute="song" >
+		<form:form class="card" action="/artist_song" method="POST" modelAttribute="artist_song" >
 			<div class="card_head">
-				<h1 class="col_white1">Add Song</h1>
+				<h1 class="col_white1">Add Artist And Song</h1>
 			</div>
-			
 			<div class="card_body">
-				<form:errors class="col_red" path="song_title" />
-				<form:input placeholder="Song Title" path="song_title" />
-								
-				<form:errors class="col_red" path="genre" />
-				<form:input placeholder="Genre" path="genre" />	
+				<form:select path="artist">
+					<c:forEach items="${artists}" var="artist">
+						<form:option value="${artist.id}">${artist.name}</form:option>
+					</c:forEach>
+				</form:select>
 
-				<input class="btn_submit" type="submit" value="Add Song" />
+				<form:select path="song">
+					<c:forEach items="${songs}" var="song" >
+						<form:option value="${song.id}">${song.song_title}</form:option>
+					</c:forEach>
+				</form:select>
+
+				<input class="btn_submit" type="submit" value="Add Artist And Song" />
 			</div>
 		</form:form>
 	</div>

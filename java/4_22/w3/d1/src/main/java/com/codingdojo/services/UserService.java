@@ -51,7 +51,7 @@ public class UserService
 		return userRepository.findByEmail(email);
 	}
 
-	public User register(User user,BindingResult result)
+	public User Register(User user,BindingResult result)
 	{
 		User existing_user=userRepository.findByEmail(user.getEmail());
 		int errors=0;
@@ -72,10 +72,11 @@ public class UserService
 		return user;
 	}
 	
-	public User login
+	public User Login
 	(
 		LoginUser form_user,
-		BindingResult result
+		BindingResult result,
+		HttpSession session
 	)
 	{
 		User db_user=userRepository.findByEmail(form_user.getEmail());
@@ -95,6 +96,7 @@ public class UserService
 			}
 		}
 		if(errors>0) return null;
+		session.setAttribute("user_id",db_user.getId());
 		return db_user;
 	}	
 }

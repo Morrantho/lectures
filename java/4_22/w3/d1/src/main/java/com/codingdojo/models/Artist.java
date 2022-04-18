@@ -7,7 +7,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -23,7 +25,13 @@ public class Artist
 	@Size(min=1,max=255,message="Nationality must be between 1-255 characters")
 	private String nationality;
 
-	@OneToMany(mappedBy="artist",fetch=FetchType.LAZY)
+	@ManyToMany(fetch=FetchType.LAZY)
+	@JoinTable
+	(
+		name="artists_songs",
+		joinColumns=@JoinColumn(name="artist_id"),
+		inverseJoinColumns=@JoinColumn(name="song_id")
+	)
 	private List<Song> songs;
 	
 	public List<Song> getSongs() {

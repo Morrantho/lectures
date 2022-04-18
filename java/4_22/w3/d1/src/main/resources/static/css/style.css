@@ -159,3 +159,8 @@ a
 	font-weight: bold;
 	font-size: 1rem;
 }
+
+a:hover
+{
+	color:#1f2022;
+}

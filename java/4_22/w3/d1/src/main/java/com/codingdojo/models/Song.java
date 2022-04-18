@@ -1,12 +1,16 @@
 package com.codingdojo.models;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -51,21 +55,28 @@ public class Song
 		this.genre = genre;
 	}
 
-	public Artist getArtist() {
-		return artist;
-	}
-
-	public void setArtist(Artist artist) {
-		this.artist = artist;
-	}
-
 	@Size(min=1,max=255,message="Song title cannot be blank!")
 	private String song_title;
 
 	@Size(min=3,max=255,message="Genre must be between 3-255 characters!")
 	private String genre;
 	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="not_artist_id")
-	private Artist artist;
+	@ManyToMany(fetch=FetchType.LAZY)
+	@JoinTable
+	(
+		name="artists_songs",
+		joinColumns=@JoinColumn(name="song_id"),
+		inverseJoinColumns=@JoinColumn(name="artist_id")
+	)
+	private List<Artist> artists;
+
+	public void setArtists(List<Artist> artists)
+	{
+		this.artists=artists;
+	}
+
+	public List<Artist> getArtists()
+	{
+		return artists;
+	}
 };
