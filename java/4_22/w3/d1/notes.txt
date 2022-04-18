@@ -2,15 +2,44 @@
 Announcements - Week 4 Day 1
 *******************************************************************************
 
+* Windows had a meltdown Friday, got fed up and reformatted to Linux. Life is good again!
+
+* STS is not abiding for me, so hope you don't mind that we use VsCode today :/
+
+* (Like we're really upset about that.)
+
 *******************************************************************************
 App Goals
 *******************************************************************************
+
+* Change our song app to be a Many To Many relationship, where one artist can 
+
+compose many songs, but one song can also be composed by many artists.
+
+* Revisit our song model, so that we only specify the name and genre, not the artist.
+
+* Make a new jsp and form with dual dropdowns to associate a pre-existing artist
+
+with a pre-existing song.
+
+* Show only the many-to-many associations (DUAL JOIN) on the jsp using a <c:forEach> loop.
 
 *******************************************************************************
 Morning Lecture
 *******************************************************************************
 
+Not many questions today! Unless you have some! (Hope ya do!)
+
+!!(A many to many can be represented multiple ways in Spring. We will do it the middle table way.)!!
+
+What 3 annotations must we use to implement a Many To Many relationship?
+
+What 3 properties must we supply the @JoinTable annotation?
+
+What model holds the many / List<> side?
+
 *******************************************************************************
 Afternoon Lecture
 *******************************************************************************
 
+No questions here, do fill in the blanks instead!
