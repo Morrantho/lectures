@@ -29,8 +29,7 @@ public class UserController
 	@GetMapping("/logout")
 	public String logout(HttpSession session)
 	{
-		userService.Logout(session);
-		return "redirect:/";
+		return UserService.Logout(session);
 	}
 	
 	@GetMapping("/register")

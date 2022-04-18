@@ -29,10 +29,11 @@ public class UserService
 		return session.getAttribute("user_id")!=null;
 	}
 	
-	public static void Logout(HttpSession session)
+	public static String Logout(HttpSession session)
 	{
-		if(!IsLoggedIn(session)) return;
+		if(!IsLoggedIn(session)) return "redirect:/login";
 		session.removeAttribute("user_id");
+		return "redirect:/login";
 	}
 	
 	public static String Deny()
