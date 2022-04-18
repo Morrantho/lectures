@@ -14,8 +14,8 @@
 </head>
 <body class="bg_white2">
 	<div class="grid bg_blue">
-		<div class="container grid p2 col2">
-			<div></div>
+		<div class="container grid col2 align_center justify_center">
+			<a href="/"><img id="dojo" src="/img/codingdojo.svg"/></a>
 			<div class="flex col2 gap2">
 				<a class="col_white1" href="/artist">Artists</a>
 				<a class="col_white1" href="/song">Songs</a>
@@ -37,7 +37,7 @@
 			</div>
 			<div class="card_body">
 				<p>Oh no! We don't know how you got here, but here's how to escape this awful realm:</p>
-				<a href="/login">Take me back!</a>
+				<a class="col_red" href="/login">Take me back!</a>
 			</div>
 		</div>
 	</div>

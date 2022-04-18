@@ -14,8 +14,9 @@
 </head>
 <body class="bg_white2">
 	<div class="grid bg_blue">
-		<div class="container grid p2 col2">
-			<div></div>
+		<div class="container grid col2 align_center justify_center">
+			<a href="/"><img id="dojo" src="/img/codingdojo.svg"/></a>
+
 			<div class="flex col2 gap2">
 				<a class="col_white1" href="/artist">Artists</a>
 				<a class="col_white1" href="/song">Songs</a>
@@ -37,9 +38,9 @@
 			</div>
 			<div class="card_body">
 				<p>You do not have access to visit the requested resource.</p>
-				<p>This one is for Mansoor.</p>
-				<a href="/login">Login</a>
-				<a href="/register">Register</a>
+				<p class="col_green">This one is for Mansoor.</p>
+				<a class="col_red" href="/login">Login</a>
+				<a class="col_red" href="/register">Register</a>
 			</div>
 		</div>
 	</div>
