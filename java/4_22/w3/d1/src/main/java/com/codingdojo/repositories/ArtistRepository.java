@@ -8,5 +8,4 @@ import com.codingdojo.models.Artist;
 @Repository
 public interface ArtistRepository extends CrudRepository<Artist,Long>
 {
-
 };

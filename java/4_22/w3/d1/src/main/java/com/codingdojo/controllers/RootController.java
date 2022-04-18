@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class RootController
 {
-    @GetMapping("")
-    public String Root()
-    {
-        return "redirect:/song";
-    }    
+	@GetMapping("")
+	public String Root()
+	{
+		return "redirect:/song";
+	}
 };

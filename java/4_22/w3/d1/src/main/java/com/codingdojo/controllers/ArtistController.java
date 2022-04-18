@@ -20,19 +20,16 @@ public class ArtistController
 {
 	@Autowired
 	private ArtistService artistService;
-	@Autowired
-	private UserService userService;
-	
-	public ArtistController(ArtistService artistService,UserService userService)
+
+	public ArtistController(ArtistService artistService)
 	{
 		this.artistService=artistService;
-		this.userService=userService;
 	}
 
 	@GetMapping("/artist")
 	public String artist_new(Model model,HttpSession session)
 	{
-		if(!userService.IsLoggedIn(session)) return "redirect:/";
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
 		model.addAttribute("artist",new Artist());
 		model.addAttribute("artists",artistService.ReadAll());
 		return "artist_new";
@@ -46,7 +43,7 @@ public class ArtistController
 		HttpSession session
 	)
 	{
-		if(!userService.IsLoggedIn(session)) return "redirect:/";		
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
 		if(br.hasErrors())
 		{
 			return "artist_new";

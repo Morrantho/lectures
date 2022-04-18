@@ -31,7 +31,7 @@
 .col22{grid-template-columns:1fr auto;}
 .block{display:block;}
 
-.bg_red{background-color:#e74c3c;}
+.bg_red{background-color:#e74c3c !important;}
 .bg_green{background-color:#2ecc71;}
 .bg_blue{background-color:#3498db;}
 .bg_yellow{background-color:#f1c40f;}

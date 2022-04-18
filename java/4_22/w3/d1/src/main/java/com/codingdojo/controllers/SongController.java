@@ -24,25 +24,20 @@ public class SongController
 	private SongService songService;
 	@Autowired
 	private ArtistService artistService;
-	@Autowired
-	private UserService us;
-	
 	public SongController
 	(
 		SongService songService,
-		ArtistService artistService,
-		UserService userService
+		ArtistService artistService
 	)
 	{
 		this.songService=songService;
 		this.artistService=artistService;
-		this.us=userService;
 	}
 	
 	@GetMapping("/song")
 	public String song_new(Model model,HttpSession session)
 	{
-		if(!us.IsLoggedIn(session)) return "redirect:/login";
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
 		model.addAttribute("song",new Song());
 		model.addAttribute("songs",songService.ReadAll());
 		model.addAttribute("artists",artistService.ReadAll());
@@ -58,7 +53,7 @@ public class SongController
 		HttpSession session
 	)
 	{
-		if(!us.IsLoggedIn(session)) return "redirect:/login";
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
 		if(res.hasErrors())
 		{
 			model.addAttribute("songs",songService.ReadAll());
@@ -76,7 +71,7 @@ public class SongController
 		HttpSession session
 	)
 	{
-		if(!us.IsLoggedIn(session)) return "redirect:/login";		
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
 		model.addAttribute("song",songService.ReadOne(id));
 		return "song_show";
 	}
@@ -89,7 +84,7 @@ public class SongController
 		HttpSession session
 	)
 	{
-		if(!us.IsLoggedIn(session)) return "redirect:/login";		
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
 		Song song=songService.ReadOne(id);
 		if(song==null) return "redirect:/song";
 		model.addAttribute("song",songService.ReadOne(id));
@@ -107,7 +102,7 @@ public class SongController
 		HttpSession session
 	)
 	{		
-		if(!us.IsLoggedIn(session)) return "redirect:/login";		
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
 		if(res.hasErrors())
 		{
 			System.out.println("HAS ERRORS");
@@ -124,7 +119,7 @@ public class SongController
 		HttpSession session
 	)
 	{
-		if(!us.IsLoggedIn(session)) return "redirect:/login";		
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();		
 		songService.Delete(id);
 		return "redirect:/song";
 	}
