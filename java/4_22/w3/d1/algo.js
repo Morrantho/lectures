@@ -37,4 +37,4 @@ class MinHeap
 let heap=new MinHeap();
 heap.Insert(5);
 heap.Log(); /* Expected: 5,10,40,20,60,50,30,70 */
-console.log(heap.Min()); /* Expected: 10 */
+console.log(heap.Min()); /* Expected: 5 */
