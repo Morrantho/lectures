@@ -16,8 +16,7 @@ public class RootController implements ErrorController
 	@GetMapping("/")
 	public String root_get(Model model)
 	{
-		model.addAttribute("user",new User());
-		return "user_register";
+		return "redirect:/register";
 	}
 
 
