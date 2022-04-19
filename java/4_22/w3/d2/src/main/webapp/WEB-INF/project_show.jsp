@@ -32,64 +32,21 @@
 	</div>
 
 	<div class="container p2 grid gap2">
-		<h1>All Projects</h1>
-		<a href="/projects/new">New Project</a>
+		<div class="card">
+			<div class="card_head">
+				<h1 class="col_white1">Project Details</h1>
+				<a href="/dashboard">Back To Dashboard</a>
+			</div>
+			
+			<div class="card_body">
+				<p>Project: ${project.title}</p>
+				<p>Description: ${project.description}</p>
+				<p>Due Date: ${project.due_date}</p>
+				<a href="/projects/${project.id}/tasks">See Tasks</a>
 
-		<table>
-			<thead>
-				<tr>
-					<th>Project</th>
-					<th>Team Lead</th>
-					<th>Due Date</th>
-					<th>Actions</th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<c:forEach items="${all_projects}" var="i">
-					<tr>
-						<td>A</td>
-						<td>B</td>
-						<td>C</td>
-						<td>D</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-
-		<h1>Your Projects</h1>
-		
-		<table>
-			<thead>
-				<tr>
-					<th>Project</th>
-					<th>Lead</th>
-					<th>Due Date</th>
-					<th>Actions</th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<c:forEach items="${your_projects}" var="i">
-					<tr>
-						<td>A</td>
-						<td>B</td>
-						<c:if test="${i.user.id==user.id}">
-							<td>
-								<a href="">${}</a>
-							</td>
-						</c:if>
-
-						<c:if test="${i.user.id!=user.id}">
-							<td>
-								<a href="">${}</a>
-							</td>
-						</c:if>
-						<td>D</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				<a href="/projects/delete/${project.id}/">Delete Project</a>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

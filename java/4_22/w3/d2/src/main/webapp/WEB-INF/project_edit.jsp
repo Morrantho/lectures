@@ -32,64 +32,26 @@
 	</div>
 
 	<div class="container p2 grid gap2">
-		<h1>All Projects</h1>
-		<a href="/projects/new">New Project</a>
+		<form:form class="card" action="/projects/update/${project.id}" method="POST" modelAttribute="project" >
+			<div class="card_head">
+				<h1 class="col_white1">Edit A Project</h1>
+			</div>
+			
+			<div class="card_body">
+				<form:errors class="col_red" path="title" />
+				<form:input placeholder="Title" path="title" />
+				
+				<form:errors class="col_red" path="description" />
+				<form:input type="text" placeholder="Description" path="description" />
 
-		<table>
-			<thead>
-				<tr>
-					<th>Project</th>
-					<th>Team Lead</th>
-					<th>Due Date</th>
-					<th>Actions</th>
-				</tr>
-			</thead>
+				<form:errors class="col_red" path="due_date" />
+				<form:input type="date" path="due_date" />
 
-			<tbody>
-				<c:forEach items="${all_projects}" var="i">
-					<tr>
-						<td>A</td>
-						<td>B</td>
-						<td>C</td>
-						<td>D</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-
-		<h1>Your Projects</h1>
-		
-		<table>
-			<thead>
-				<tr>
-					<th>Project</th>
-					<th>Lead</th>
-					<th>Due Date</th>
-					<th>Actions</th>
-				</tr>
-			</thead>
-
-			<tbody>
-				<c:forEach items="${your_projects}" var="i">
-					<tr>
-						<td>A</td>
-						<td>B</td>
-						<c:if test="${i.user.id==user.id}">
-							<td>
-								<a href="">${}</a>
-							</td>
-						</c:if>
-
-						<c:if test="${i.user.id!=user.id}">
-							<td>
-								<a href="">${}</a>
-							</td>
-						</c:if>
-						<td>D</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				<form:input type="hidden" path="owner" value="${project.owner.id}" />
+				
+				<input class="btn_submit" type="submit" value="Submit" />
+			</div>
+		</form:form>
 	</div>
 </body>
 </html>
