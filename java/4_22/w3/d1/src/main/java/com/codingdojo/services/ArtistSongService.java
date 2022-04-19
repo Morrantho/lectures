@@ -34,4 +34,10 @@ public class ArtistSongService
 		*/
 		return (ArrayList<ArtistSong>)artistSongRepository.findAll();
 	}
+
+	public Boolean Exists(Long artist_id,Long song_id)
+	{
+		ArtistSong artistSong=artistSongRepository.findByArtistIdAndSongId(artist_id, song_id);
+		return artistSong!=null;
+	}
 }

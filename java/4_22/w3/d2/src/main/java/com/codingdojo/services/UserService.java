@@ -40,10 +40,16 @@ public class UserService
 	{
 		return "user_deny";
 	}
-
+	
 	public void Create(User user)
 	{
 		userRepository.save(user);
+	}
+
+	public User FindById(Long id)
+	{
+		Optional<User> user=userRepository.findById(id);
+		return user.isPresent()?user.get():null;
 	}
 
 	public User FindByEmail(String email)
@@ -96,7 +102,7 @@ public class UserService
 			}
 		}
 		if(errors>0) return null;
-		session.setAttribute("user_id",db_user.getId());
+		session.setAttribute("user_id",db_user);
 		return db_user;
 	}	
 }

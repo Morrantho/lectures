@@ -32,17 +32,24 @@
 	</div>
 
 	<div class="container p2 grid gap2">
-		<div class="card">
-			<div class="card_head bg_red">
-				<h1 class="col_white1">Access Denied</h1>
+		<form:form class="card" action="/projects" method="POST" modelAttribute="project" >
+			<div class="card_head">
+				<h1 class="col_white1">Create A Project</h1>
 			</div>
+			
 			<div class="card_body">
-				<p>You do not have access to visit the requested resource.</p>
-				<p class="col_green">This one is for Mansoor.</p>
-				<a class="col_red" href="/login">Login</a>
-				<a class="col_red" href="/register">Register</a>
+				<form:errors class="col_red" path="title" />
+				<form:input placeholder="Title" path="title" />
+				
+				<form:errors class="col_red" path="description" />
+				<form:input type="text" placeholder="Description" path="description" />
+
+				<form:errors class="col_red" path="due_date" />
+				<form:input type="date" path="due_date" />
+				
+				<input class="btn_submit" type="submit" value="Submit" />
 			</div>
-		</div>
+		</form:form>
 	</div>
 </body>
 </html>

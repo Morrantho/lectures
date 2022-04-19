@@ -1,15 +1,19 @@
 package com.codingdojo.models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Transient;
-import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -32,6 +36,50 @@ public class User
 	@Size(min=8, max=128, message="Confirm Password must be between 8 and 128 characters")
 	private String confirm;
 	
+	@OneToMany(mappedBy="owner",fetch=FetchType.LAZY)
+	private List<Project> ownedProjects;
+
+	public void setOwnedProjects(List<Project> projects)
+	{
+		this.ownedProjects=projects;
+	}
+
+	public List<Project> getOwnedProjects()
+	{
+		return ownedProjects;
+	}
+
+	@ManyToMany(fetch=FetchType.LAZY)
+	@JoinTable(
+		name="users_projects",
+		joinColumns=@JoinColumn(name="user_id"),
+		inverseJoinColumns=@JoinColumn(name="project_id")
+	)
+	private List<Project> projects;
+
+	public void setProjects(List<Project> projects)
+	{
+		this.projects=projects;
+	}
+
+	public List<Project> getProjects()
+	{
+		return projects;
+	}
+
+	@OneToMany(mappedBy="user",fetch=FetchType.LAZY)
+	private List<Task> tasks;
+
+	public void setTasks(List<Task> tasks)
+	{
+		this.tasks=tasks;
+	}
+
+	public List<Task> getTasks()
+	{
+		return tasks;
+	}
+
 	public User()
 	{
 		

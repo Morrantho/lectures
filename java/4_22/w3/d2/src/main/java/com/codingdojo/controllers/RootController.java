@@ -16,7 +16,13 @@ public class RootController implements ErrorController
 	@GetMapping("/")
 	public String root_get(Model model)
 	{
-		return "redirect:/register";
+		return "redirect:/dashboard";
+	}
+
+	@GetMapping("/dashboard")
+	public String dashboard()
+	{
+		return "";
 	}
 
 

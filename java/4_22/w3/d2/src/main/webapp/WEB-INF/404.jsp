@@ -14,8 +14,11 @@
 </head>
 <body class="bg_white2">
 	<div class="grid bg_blue">
-		<div class="container grid col2 align_center justify_center">
+		<div class="container grid col3 align_center justify_center">
 			<a href="/"><img id="dojo" src="/img/codingdojo.svg"/></a>
+
+			<h1 class="col_white1">Exam</h1>
+
 			<div class="flex col2 gap2">
 				<c:if test="${user_id!=null}">
 					<a class="col_white1" href="/logout">Logout</a>
