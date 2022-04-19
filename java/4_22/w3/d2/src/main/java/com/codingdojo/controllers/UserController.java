@@ -31,7 +31,7 @@ public class UserController
 	{
 		return UserService.Logout(session);
 	}
-	
+
 	@GetMapping("/register")
 	public String user_register_get(Model model)
 	{

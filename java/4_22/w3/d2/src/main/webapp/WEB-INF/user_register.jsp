@@ -18,8 +18,6 @@
 			<a href="/"><img id="dojo" src="/img/codingdojo.svg"/></a>
 
 			<div class="flex col2 gap2">
-				<a class="col_white1" href="/artist">Artists</a>
-				<a class="col_white1" href="/song">Songs</a>
 				<c:if test="${user_id!=null}">
 					<a class="col_white1" href="/logout">Logout</a>
 				</c:if>
