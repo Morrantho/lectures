@@ -19,13 +19,13 @@ public class UserProjectService
 		this.userProjectRepository=userProjectRepository;
 	}
 
-	public ArrayList<UserProject> FindByUser(Long user_id)
+	public ArrayList<UserProject> FindByUserId(Long user_id)
 	{
-		return (ArrayList<UserProject>)userProjectRepository.findByUser(user_id);
+		return (ArrayList<UserProject>)userProjectRepository.findByUserId(user_id);
 	}
 
-	public ArrayList<UserProject> FindNotByUser(Long user_id)
+	public ArrayList<UserProject> FindByUserIdNot(Long user_id)
 	{
-		return (ArrayList<UserProject>)userProjectRepository.findByUserNotContaining(user_id);
+		return (ArrayList<UserProject>)userProjectRepository.findByUserIdNot(user_id);
 	}
 };

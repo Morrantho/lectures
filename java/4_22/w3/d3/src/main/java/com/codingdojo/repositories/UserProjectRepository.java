@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserProjectRepository extends CrudRepository<UserProject,Long>
 {
-	List<UserProject> findByUser(Long user_id);
+	List<UserProject> findByUserId(Long user_id);
 	/*
 		select * from users_projects
 		join  users_projects.user_id=users.id
@@ -18,7 +18,7 @@ public interface UserProjectRepository extends CrudRepository<UserProject,Long>
 		where users.id=?
 	*/
 
-	List<UserProject> findByUserNotContaining(Long user_id);
+	List<UserProject> findByUserIdNot(Long user_id);
 	/*
 		select * from users_projects
 		join  users_projects.user_id=users.id

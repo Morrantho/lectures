@@ -72,7 +72,7 @@ public class ProjectController
 			}
 			return "project_new";
 		}
-		User user=(User)session.getAttribute("user_id");
+		User user=UserService.GetSession(session);
 		project.setOwner(user);
 		projectService.Create(project);
 		return "redirect:/dashboard";
@@ -103,7 +103,7 @@ public class ProjectController
 	)
 	{
 		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
-		User user=(User)session.getAttribute("user_id");
+		User user=UserService.GetSession(session);
 		User project_owner=project.getOwner();
 		if(project_owner.getId()!=user.getId())
 		{
@@ -152,7 +152,7 @@ public class ProjectController
 		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
 		Project project=projectService.ReadOne(id);
 		if(project==null) return "redirect:/dashboard";
-		User user=(User)session.getAttribute("user_id");
+		User user=UserService.GetSession(session);
 		if(project.getOwner().getId()!=user.getId())
 		{
 			return "redirect:/dashboard";

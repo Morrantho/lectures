@@ -20,10 +20,10 @@
 			<h1 class="col_white1">Exam</h1>
 
 			<div class="flex col2 gap2">
-				<c:if test="${user_id!=null}">
+				<c:if test="${user!=null}">
 					<a class="col_white1" href="/logout">Logout</a>
 				</c:if>
-				<c:if test="${user_id==null}">
+				<c:if test="${user==null}">
 					<a class="col_white1" href="/login">Login</a>
 				</c:if>
 				<a class="col_white1" href="/register">Register</a>
@@ -46,14 +46,14 @@
 			</thead>
 
 			<tbody>
-				<c:forEach items="${all_projects}" var="i">
+				<%-- <c:forEach items="${all_projects}" var="i"> --%>
 					<tr>
 						<td>A</td>
 						<td>B</td>
 						<td>C</td>
 						<td>D</td>
 					</tr>
-				</c:forEach>
+				<%-- </c:forEach> --%>
 			</tbody>
 		</table>
 
@@ -70,24 +70,24 @@
 			</thead>
 
 			<tbody>
-				<c:forEach items="${your_projects}" var="i">
+				<%-- <c:forEach items="${your_projects}" var="i"> --%>
 					<tr>
 						<td>A</td>
 						<td>B</td>
-						<c:if test="${i.user.id==user.id}">
+						<%-- <c:if test="${i.user.id==user.id}"> --%>
 							<td>
-								<a href="">${}</a>
+								<a href=""></a>
 							</td>
-						</c:if>
+						<%-- </c:if> --%>
 
-						<c:if test="${i.user.id!=user.id}">
+						<%-- <c:if test="${i.user.id!=user.id}"> --%>
 							<td>
-								<a href="">${}</a>
+								<a href=""></a>
 							</td>
-						</c:if>
+						<%-- </c:if> --%>
 						<td>D</td>
 					</tr>
-				</c:forEach>
+				<%-- </c:forEach> --%>
 			</tbody>
 		</table>
 	</div>

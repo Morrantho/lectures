@@ -20,10 +20,10 @@
 			<h1 class="col_white1">Exam</h1>
 
 			<div class="flex col2 gap2">
-				<c:if test="${user_id!=null}">
+				<c:if test="${user!=null}">
 					<a class="col_white1" href="/logout">Logout</a>
 				</c:if>
-				<c:if test="${user_id==null}">
+				<c:if test="${user==null}">
 					<a class="col_white1" href="/login">Login</a>
 				</c:if>
 				<a class="col_white1" href="/register">Register</a>

@@ -26,16 +26,21 @@ public class UserService
 	
 	public static Boolean IsLoggedIn(HttpSession session)
 	{
-		return session.getAttribute("user_id")!=null;
+		return session.getAttribute("user")!=null;
 	}
 	
 	public static String Logout(HttpSession session)
 	{
 		if(!IsLoggedIn(session)) return "redirect:/login";
-		session.removeAttribute("user_id");
+		session.removeAttribute("user");
 		return "redirect:/login";
 	}
 	
+	public static User GetSession(HttpSession session)
+	{
+		return (User)session.getAttribute("user");
+	}
+
 	public static String Deny()
 	{
 		return "user_deny";
@@ -102,7 +107,7 @@ public class UserService
 			}
 		}
 		if(errors>0) return null;
-		session.setAttribute("user_id",db_user);
+		session.setAttribute("user",db_user);
 		return db_user;
 	}	
 }
