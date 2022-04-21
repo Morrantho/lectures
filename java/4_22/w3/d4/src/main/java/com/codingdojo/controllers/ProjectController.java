@@ -2,13 +2,16 @@ package com.codingdojo.controllers;
 
 import java.util.Date;
 
-import javax.naming.Binding;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import com.codingdojo.models.Project;
+import com.codingdojo.models.Task;
 import com.codingdojo.models.User;
+import com.codingdojo.models.UserProject;
 import com.codingdojo.services.ProjectService;
+import com.codingdojo.services.TaskService;
+import com.codingdojo.services.UserProjectService;
 import com.codingdojo.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,15 +30,23 @@ public class ProjectController
 	private ProjectService projectService;
 	@Autowired
 	private UserService userService;
+	@Autowired
+	private UserProjectService userProjectService;
+	@Autowired
+	private TaskService taskService;
 
 	public ProjectController
 	(
 		ProjectService projectService,
-		UserService userService
+		UserService userService,
+		UserProjectService userProjectService,
+		TaskService taskService
 	)
 	{
 		this.projectService=projectService;
+		this.userProjectService=userProjectService;
 		this.userService=userService;
+		this.taskService=taskService;
 	}
 
 	@GetMapping("/projects/new")
@@ -75,6 +86,11 @@ public class ProjectController
 		User user=UserService.GetSession(session);
 		project.setOwner(user);
 		projectService.Create(project);
+
+		UserProject userProject=new UserProject();
+		userProject.setProject(project);
+		userProject.setUser(user);
+		userProjectService.Create(userProject);
 		return "redirect:/dashboard";
 	}
 
@@ -159,5 +175,76 @@ public class ProjectController
 		}
 		projectService.Delete(id);
 		return "redirect:/dashboard";
+	}
+
+	@GetMapping("/projects/{id}/join")
+	public String ProjectJoin
+	(
+		@PathVariable("id") Long id,
+		HttpSession session
+	)
+	{
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
+		User user=UserService.GetSession(session);
+		Project project=projectService.ReadOne(id);
+		if(project==null) return "redirect:/dashboard";
+		UserProject userProject=new UserProject();
+		userProject.setProject(project);
+		userProject.setUser(user);
+		userProjectService.Create(userProject);
+		return "redirect:/dashboard";
+	}
+
+	@GetMapping("/projects/{id}/leave")
+	public String ProjectLeave
+	(
+		@PathVariable("id") Long user_project_id,
+		HttpSession session
+	)
+	{
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
+		userProjectService.DeleteById(user_project_id);
+		return "redirect:/dashboard";
+	}
+
+	@GetMapping("/projects/{id}/tasks")
+	public String ProjectTaskShowGet
+	(
+		@PathVariable("id") Long id,
+		Model model,
+		HttpSession session
+	)
+	{
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
+		model.addAttribute("task",new Task());
+		Project project=projectService.ReadOne(id);
+		if(project==null) return "redirect:/dashboard";
+		model.addAttribute("project",project);
+		return "task_new";
+	}
+
+	@PostMapping("/projects/{id}/tasks")
+	public String ProjectTaskShowPost
+	(
+		@Valid @ModelAttribute("task") Task task,
+		BindingResult br,
+		@PathVariable("id") Long project_id,
+		HttpSession session,
+		Model model
+	)
+	{
+		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
+		User user=UserService.GetSession(session);
+		Project project=projectService.ReadOne(project_id);
+		if(project==null) return "redirect:/dashboard";
+		if(br.hasErrors())
+		{
+			model.addAttribute("project",project);
+			return "task_new";
+		}
+		task.setUser(user);
+		task.setProject(project);
+		taskService.Create(task);
+		return "redirect:/projects/"+project_id+"/tasks";
 	}
 }

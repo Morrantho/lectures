@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.codingdojo.models.Project;
 import com.codingdojo.models.User;
 import com.codingdojo.models.UserProject;
 import com.codingdojo.services.ProjectService;
@@ -51,11 +52,17 @@ public class RootController implements ErrorController
 	{
 		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
 		User user=UserService.GetSession(session);
+		// User user=(User)session.getAttribute("user_id");
 
-		ArrayList<UserProject> all_projects=userProjectService.FindByUserId(user.getId());
-		ArrayList<UserProject> your_projects=userProjectService.FindByUserIdNot(user.getId());
+		ArrayList<UserProject> users_projects=userProjectService.FindAll();
+		model.addAttribute("users_projects",users_projects);
+
+		ArrayList<Project> all_projects=projectService.ReadAll();
 		model.addAttribute("all_projects",all_projects);
+
+		ArrayList<UserProject> your_projects=userProjectService.FindByUserId(user.getId());
 		model.addAttribute("your_projects",your_projects);
+		
 		return "dashboard";
 	}
 

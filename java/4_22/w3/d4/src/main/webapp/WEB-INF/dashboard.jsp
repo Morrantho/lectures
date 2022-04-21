@@ -45,15 +45,40 @@
 				</tr>
 			</thead>
 
+			<%--
+				projects:
+				id
+				2
+				3
+				4
+
+				users_projects:
+				id 		project_id 		user_id
+				2		2				1
+				3		3				2
+				5		4				2
+
+				2 = max
+			--%>
+
 			<tbody>
-				<%-- <c:forEach items="${all_projects}" var="i"> --%>
-					<tr>
-						<td>A</td>
-						<td>B</td>
-						<td>C</td>
-						<td>D</td>
-					</tr>
-				<%-- </c:forEach> --%>
+				<c:forEach items="${all_projects}" var="project">
+					<c:forEach items="${users_projects}" var="user_project">
+
+						<c:if test="${project.id!=user_projects.project.id&&user_project.user.id!=user.id}">
+						
+							<%-- <c:if test="${user.id!=project.owner.id}"> --%>
+								<tr>
+									<td><a href="/projects/${project.id}">${project.title}</a></td>
+									<td>${project.owner.email}</td>
+									<td>${project.due_date}</td>
+									<td><a href="/projects/${project.id}/join">Join Team</a></td>
+								</tr>
+							<%-- </c:if> --%>
+						</c:if>
+
+					</c:forEach>
+				</c:forEach>
 			</tbody>
 		</table>
 
@@ -70,24 +95,24 @@
 			</thead>
 
 			<tbody>
-				<%-- <c:forEach items="${your_projects}" var="i"> --%>
+				<c:forEach items="${your_projects}" var="user_project">
 					<tr>
-						<td>A</td>
-						<td>B</td>
-						<%-- <c:if test="${i.user.id==user.id}"> --%>
+						<td><a href="/projects/${user_project.project.id}">${user_project.project.title}</a></td>
+						<td>${user_project.project.owner.email}</td>
+						<td>${user_project.project.due_date}</td>
+						<c:if test="${user_project.project.owner.id==user.id}">
 							<td>
-								<a href=""></a>
+								<a href="">Edit</a>
 							</td>
-						<%-- </c:if> --%>
+						</c:if>
 
-						<%-- <c:if test="${i.user.id!=user.id}"> --%>
+						<c:if test="${user_project.project.owner.id!=user.id}">
 							<td>
-								<a href=""></a>
+								<a href="/projects/${user_project.id}/leave">Leave Team</a>
 							</td>
-						<%-- </c:if> --%>
-						<td>D</td>
+						</c:if>
 					</tr>
-				<%-- </c:forEach> --%>
+				</c:forEach>
 			</tbody>
 		</table>
 	</div>

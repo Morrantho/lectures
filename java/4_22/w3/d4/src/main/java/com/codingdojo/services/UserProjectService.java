@@ -2,6 +2,8 @@ package com.codingdojo.services;
 
 import java.util.ArrayList;
 
+import com.codingdojo.models.Project;
+import com.codingdojo.models.User;
 import com.codingdojo.models.UserProject;
 import com.codingdojo.repositories.UserProjectRepository;
 
@@ -19,6 +21,11 @@ public class UserProjectService
 		this.userProjectRepository=userProjectRepository;
 	}
 
+	public void Create(UserProject userProject)
+	{
+		userProjectRepository.save(userProject);
+	}
+
 	public ArrayList<UserProject> FindByUserId(Long user_id)
 	{
 		return (ArrayList<UserProject>)userProjectRepository.findByUserId(user_id);
@@ -28,4 +35,19 @@ public class UserProjectService
 	{
 		return (ArrayList<UserProject>)userProjectRepository.findByUserIdNot(user_id);
 	}
+
+	public ArrayList<UserProject> FindAll()
+	{
+		return (ArrayList<UserProject>)userProjectRepository.findAll();
+	}
+
+	public void DeleteById(Long user_project_id)
+	{
+		userProjectRepository.deleteById(user_project_id);
+	}
+
+	// public void DeleteByProjectAndUser(Long project_id,Long user_id)
+	// {
+	// 	userProjectRepository.deleteByProjectIdAndUserId(project_id,user_id);
+	// }
 };
