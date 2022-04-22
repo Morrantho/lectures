@@ -45,39 +45,16 @@
 				</tr>
 			</thead>
 
-			<%--
-				projects:
-				id
-				2
-				3
-				4
-
-				users_projects:
-				id 		project_id 		user_id
-				2		2				1
-				3		3				2
-				5		4				2
-
-				2 = max
-			--%>
-
 			<tbody>
-				<c:forEach items="${all_projects}" var="project">
-					<c:forEach items="${users_projects}" var="user_project">
-
-						<c:if test="${project.id!=user_projects.project.id&&user_project.user.id!=user.id}">
-						
-							<%-- <c:if test="${user.id!=project.owner.id}"> --%>
-								<tr>
-									<td><a href="/projects/${project.id}">${project.title}</a></td>
-									<td>${project.owner.email}</td>
-									<td>${project.due_date}</td>
-									<td><a href="/projects/${project.id}/join">Join Team</a></td>
-								</tr>
-							<%-- </c:if> --%>
-						</c:if>
-
-					</c:forEach>
+				<c:forEach items="${users_projects}" var="user_project">
+					<%-- <c:if test="${user_project.user.id!=user.id}"> --%>
+						<tr>
+							<td><a href="/projects/${user_project.project.id}">${user_project.project.id}-${user_project.project.title}</a></td>
+							<td>${user_project.project.owner.email}</td>
+							<td>${user_project.project.due_date}</td>
+							<td><a href="/projects/${user_project.project.id}/join">Join Team</a></td>
+						</tr>
+					<%-- </c:if> --%>
 				</c:forEach>
 			</tbody>
 		</table>
@@ -97,7 +74,7 @@
 			<tbody>
 				<c:forEach items="${your_projects}" var="user_project">
 					<tr>
-						<td><a href="/projects/${user_project.project.id}">${user_project.project.title}</a></td>
+						<td><a href="/projects/${user_project.project.id}">${user_project.project.id}-${user_project.project.title}</a></td>
 						<td>${user_project.project.owner.email}</td>
 						<td>${user_project.project.due_date}</td>
 						<c:if test="${user_project.project.owner.id==user.id}">

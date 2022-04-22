@@ -52,17 +52,18 @@ public class RootController implements ErrorController
 	{
 		if(!UserService.IsLoggedIn(session)) return UserService.Deny();
 		User user=UserService.GetSession(session);
-		// User user=(User)session.getAttribute("user_id");
 
+		
+		ArrayList<UserProject> your_projects=userProjectService.FindByUserId(user.getId());
+		model.addAttribute("your_projects",your_projects);
 		ArrayList<UserProject> users_projects=userProjectService.FindAll();
 		model.addAttribute("users_projects",users_projects);
 
-		ArrayList<Project> all_projects=projectService.ReadAll();
-		model.addAttribute("all_projects",all_projects);
-
-		ArrayList<UserProject> your_projects=userProjectService.FindByUserId(user.getId());
-		model.addAttribute("your_projects",your_projects);
-		
+		for(int i=0;i<users_projects.size();i++)
+		{
+			UserProject up=users_projects.get(i);
+			
+		}
 		return "dashboard";
 	}
 
