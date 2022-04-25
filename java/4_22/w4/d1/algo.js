@@ -47,12 +47,13 @@ class Stack
 	*/
 	IsEmpty()
 	{
+		/* Your Code Here */
 	}
 
 	/*
 		Time:O(N)
 		Space:O(1)
-		Description:Here to iterate your stack starting at the top.
+		Description:Iterate a stack from it's top.
 	*/
 	Log()
 	{
