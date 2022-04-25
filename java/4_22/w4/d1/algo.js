@@ -69,3 +69,9 @@ stack.Push(20);
 stack.Push(30);
 stack.Push(40);
 stack.Log(); /* Expected: 40->30->20->10-> */
+console.log(stack.Pop()); /* Expected: 40 */
+console.log(stack.Peek()); /* Expected: 30 */
+stack.Pop(); /* 30 */
+stack.Pop(); /* 20 */
+stack.Pop(); /* 10 */
+console.log(stack.IsEmpty()); /* Expected: true */
