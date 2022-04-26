@@ -15,6 +15,7 @@ class DList
 	constructor()
 	{
 		this.head=undefined;
+		this.tail=undefined;
 	}
 
 	/* 

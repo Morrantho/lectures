@@ -1,10 +1,6 @@
 *******************************************************************************
-Announcements - Week 4 Day 1:
+Announcements - Week 4 Day 2:
 *******************************************************************************
-
-* Instructor Rabh is out today.
-
-* T.A. Kelvin is out this morning, will be back in the afternoon.
 
 You have until !!! WEDNESDAY, 4/27/22 !!! to take / retake the exam!
 
@@ -27,34 +23,12 @@ Please try and start your exam by 11 or 12 CST!
 Morning Goals:
 *******************************************************************************
 
-* Be assigned a team if you've completed the exam and aren't already on one.
-
-* Discuss / Implement your wireframes.
-
-* Discuss / Implement your user stories, trello, task delegation.
-
-* Setup your Git Repo + Collaborators / Branching / LiveShare.
-
-* Project Ideas:
-
-	* Finance Tracker
-
-	* Movie Tracker
-
-	* Music / Artist / Song Tracker
-
-	* Cooking Recipes
-
-	* Order Placement Manager
-
-	* Coding Progress Blog
-
-	* Bulletin Board / Forum
+* Group Check Ins
 
 *******************************************************************************
 Afternoon Goals:
 *******************************************************************************
 
-* Review group projects, plans, wireframes, etc.
+* Group Stand Up
 
 *******************************************************************************
