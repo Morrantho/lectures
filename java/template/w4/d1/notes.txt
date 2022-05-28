@@ -1,0 +1,41 @@
+*******************************************************************************
+Announcements - Week 4 Day 1:
+*******************************************************************************
+
+
+
+*******************************************************************************
+Morning Goals:
+*******************************************************************************
+
+* Be assigned a team if you've completed the exam and aren't already on one.
+
+* Discuss / Implement your wireframes.
+
+* Discuss / Implement your user stories, trello, task delegation.
+
+* Setup your Git Repo + Collaborators / Branching / LiveShare.
+
+* Project Ideas:
+
+	* Finance Tracker
+
+	* Movie Tracker
+
+	* Music / Artist / Song Tracker
+
+	* Cooking Recipes
+
+	* Order Placement Manager
+
+	* Coding Progress Blog
+
+	* Bulletin Board / Forum
+
+*******************************************************************************
+Afternoon Goals:
+*******************************************************************************
+
+* Review group projects, plans, wireframes, etc.
+
+*******************************************************************************

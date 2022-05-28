@@ -1,0 +1,52 @@
+*******************************************************************************
+Announcements - Week 3 Day 5
+*******************************************************************************
+
+You have until Wednesday of next week to take / retake the exam!
+
+90% of core assignments completed before attempting! ( 9 / 10 for Java )
+
+Exam Code: 2cC21aEe
+
+Reminder that you only need to include the code to activate your exam.
+
+NOTIFY MYSELF, RABH, OR KELVIN FOR A LIVE GRADE OF YOUR EXAM AS WELL AS DM ANY
+OF US WHEN JUST BEFORE YOU START YOUR EXAM.
+
+Please attempt and finish the RED BELT portion of the exam first and then move onto BLACK BELT. If you end up breaking or missing RED BELT features, you will not receive the BLACK BELT. Once you have completed the RED BELT have someone check it, verify the features are all working before you move on and submit what you have on the platform. If you later complete the black belt you can always upload again 
+If you miss the timeframe by a few minutes and are no longer able to upload, send me a message and I can accept it and manually upload as well. Reminder that you don't need to include a video of the exam.
+
+Please do not share any details about the exam with your fellow students who have not yet taken the exam!
+
+Please try and start your exam by 11 or 12 CST!
+
+*******************************************************************************
+Agile / Project Talk
+*******************************************************************************
+
+* Wireframes and User Stories on Trello for homework / weekend
+
+* https://login.codingdojo.com/m/315/9908/67124
+
+* https://docs.google.com/spreadsheets/d/1iNqOr1GPZgs1R-6hxWCjVnyaMBwrblhzdWi-_9ueDm0/edit#gid=1945931138
+
+* Project Ideas:
+	* Finance Tracker
+	* Movie Tracker
+	* Spotify Clone
+
+* Teams / Groups on Monday if passed exam.
+
+* Monday EOD: Wireframe + User Stories feedback
+
+*******************************************************************************
+
+1. Tell them the home work assignment for over the weekend. Wireframes and user stories on trello. Send them the link for project week so if they need help with the homework, they can look at the videos in the platform: https://login.codingdojo.com/m/315/9908/67124
+
+2. Have some default ideas for projects (2 ideas, 1 that will take 2 days to complete, and 1 that is more robust which can take 3-4 days to complete)-> this is if they don't have an idea
+
+3. Set up the teams before Monday morning class. (Rob will take care of this)
+
+4. Monday morning we will tell them about the project week teams and to put them selves into a team if they have passed exam. 
+
+5. Monday PM there will be a wireframe and user stories feedback session (group).

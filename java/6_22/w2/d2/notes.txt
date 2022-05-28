@@ -1,0 +1,137 @@
+/*****************************************************************************/
+/* Announcements */
+/*****************************************************************************/
+
+Make today more of a catch up day, code review, and core assignment day. Have
+
+morning lecture, but not afternoon lecture. Condense morning lecture so that
+
+we can use the whole afternoon for code reviews and core assignment completion
+
+as a group for those whom wish to attend.
+
+/*****************************************************************************/
+/* Today's App Goals */
+/*****************************************************************************/
+
+Make a C.R.U.D. application that stores data via MySQL.
+
+Create a database model of cohort's choice. ( Movies? Music? Food? )
+
+Use a repository to perform operations on our model.
+
+Use a service as an additional layer of protection and business logic between our model and
+database.
+
+Use model annotations for error handling.
+
+/*****************************************************************************/
+/* Morning Lecture */
+/*****************************************************************************/
+
+/* Ask who has MySQL workbench installed. (Not required, but useful. We could just use MySQL shell). */
+
+/*
+
+*/
+
+/* What does M.V.C stand for? */
+
+/*
+
+*/
+
+/* What is a Database Model? */
+
+/*
+
+*/
+
+/* What settings must we add to our application.properties config for MySQL support? */
+
+/*
+
+*/
+
+/* What dependencies must we add to our pom.xml for MySQL support? */
+
+/*
+
+*/
+
+/* What is J.P.A., and what does it stand for? */
+
+/*
+
+*/
+
+/* What annotation do we need above a CLASS to tell Spring it's a Database Model? */
+
+/*
+
+*/
+
+/* What annotation(s) do we need above a field to tell Spring it's a Primary Key? */
+
+/*
+
+*/
+
+/* What validation annotation do we need above a FIELD / MEMBER to tell Spring it cannot be blank? */
+
+/*
+
+*/
+
+/* What validation annotation do we need above a field to tell Spring it's length must be within a specified range? */
+
+/*
+
+*/
+
+/* How do we specify an error message within a validation annotation? */
+
+/*
+
+*/
+
+/*****************************************************************************/
+/* Afternoon Lecture */
+/*****************************************************************************/
+
+/* What is a Service? */
+
+/*
+	
+*/
+
+/* What annotation do we need above a Service to tell Spring it's a service? */
+
+/*
+	
+*/
+
+/* What is a Repository? */
+
+/*
+	
+*/
+
+/* What annotation do we need above an interface to tell Spring it's a Repository? */
+
+/*
+	
+*/
+
+/* What interface must we extend to use the built in CRUD features of JPA? */
+
+/*
+	
+*/
+
+/* What two arguments must we place within the <> braces when extending a CrudRepository?  */
+/* What does each of these represent respectively?
+
+/*
+	
+*/

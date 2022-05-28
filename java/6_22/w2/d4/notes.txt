@@ -1,0 +1,69 @@
+/*****************************************************************************/
+/* Announcements */
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/* Today's App Goals */
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/* Morning Lecture */
+/*****************************************************************************/
+
+/* What two annotations must we supply our "Song" model in order to create a */
+/* One To Many Relationship? */
+
+/*
+
+*/
+
+/* What is fetchtype LAZY vs fetchtype EAGER? */
+
+/*
+
+*/
+
+/* What does the "name" attribute of the @JoinColumn annotation reference? */
+
+/*
+
+*/
+
+/* What should the TYPE be that we are storing in our Song model? */
+
+/*
+
+*/
+
+/* What annotation must we supply our "Artist" model in order to create a */
+/* One To Many Relationship? */
+
+/*
+
+*/
+
+/* What does the "mappedBy" attribute in a @OneToMany annotation represent? */
+/* One To Many Relationship? */
+
+/*
+
+*/
+
+/* What should the TYPE be that we are storing in our Artist model? */
+
+/*
+
+*/
+
+/*****************************************************************************/
+/* Afternoon Lecture */
+/*****************************************************************************/
+
+/*
+	Ensure that we can select an artist from a dropdown and add them as the creator
+	of that song as well as put them in the artist's list of songs.
+*/

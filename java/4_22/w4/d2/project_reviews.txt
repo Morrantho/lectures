@@ -1,0 +1,89 @@
+* Group Stand Up - 5 minute standup
+
+1. What is the purpose of your application?
+
+Wizards - Mansoor - Building an application to prioritize employee ideas.
+Wizards - Lucas - Project Manager / Task Management / Daily Planner.
+Wizards - Jose - Expense Tracker / Tracks Expenses 
+
+Warlocks - Tamma - Learning Platform / Course Enrollment
+Warlocks - Cheng - Learning Platform / Course Enrollment
+
+Sorcerors - Saeng - Clothing Retailer / Ecommerce
+
+Druids - Demmar - Health Appt / Prescriptions Scheduler
+
+Monks - John Heine - Non-Profit, Custom Guitars, Donations, Qualifications
+Monks - Karolis - Movie Tracker, Favorites, Genres, Old, Ratings
+Monks - Michele - Social Linguistics / Language Learning.
+
+Paladins - Carmen - Fantasy Football App / Custom API / Player DB / Leagues.
+Paladins - Max - Fantasy Football App / Custom API / Player DB / Leagues.
+Paladins - John - Fantasy Football App / Custom API / Player DB / Leagues.
+Paladins - Andres - Fantasy Football App / Custom API / Player DB / Leagues.
+
+2. What new features are you learning or have you learned in your group?
+
+Wizards - Mansoor - Progress Bar | ChartJS, Search Bar, Image Upload.
+Wizards - Lucas - TBD
+Wizards - Jose - ChartJS, dynamic search, CSS
+
+Warlocks - Tamma - Learning Platform / Course Enrollment
+Warlocks - Cheng - Learning Platform / Course Enrollment
+
+Sorcerors - Saeng - Image Upload
+
+Druids - Demmar - Image Upload / API 
+
+Monks - John Heine - Various CSS Tricks, Transitions, Drop shadows, Highlights
+Monks - Karolis - Image Upload
+Monks - Michele - Bootstrap / Advanced CSS / Progress Tracker
+
+Paladins - Carmen - VueJS / CSV Parsing
+Paladins - Max - VueJS / CSV Parsing
+Paladins - John - VueJS / CSV Parsing
+Paladins - Andres - VueJS / CSV Parsing
+
+3. What is the biggest hurdle you've faced thus far?
+
+Wizards - Mansoor - Not Enough Time | N:N Relationships
+Wizards - Lucas - Using VsCode instead of Spring tool suite.
+Wizards - Jose - Make expenses private to the user whom created them.
+
+Warlocks - Tamma - Image upload.
+Warlocks - Cheng - N:N Relationship, Role Immunity.
+
+Sorcerors - Saeng - N/A
+
+Druids - Demmar - N/A
+
+Monks - John Heine - Transparency / Z-Order
+Monks - Karolis - Image Upload
+Monks - Michele - Finding an API that would work / CSS IS HARD >:(
+
+Paladins - Carmen - Limited Data / Scraping Data
+Paladins - Max - Limited Data / Scraping Data
+Paladins - John - Limited Data / Scraping Data
+Paladins - Andres - Limited Data / Scraping Data
+
+4. What is the biggest achievement you've made so far?
+
+Wizards - Mansoor - Not Enough Time | N:N Relationships
+Wizards - Lucas - Login + Registration up and runnin.
+Wizards - Jose - Full CRUD Master
+
+Warlocks - Tamma - Login + Registration
+Warlocks - Cheng - Login + Registration
+
+Sorcerors - Saeng - N/A
+
+Druids - Demmar - N/A
+
+Monks - John Heine - Custom Image Footer for links
+Monks - Karolis - N/A
+Monks - Michele - Planning complete / Login + Registration.
+
+Paladins - Carmen - Consolidated / VueJS / CSV Parsing
+Paladins - Max - Consolidated / VueJS / CSV Parsing
+Paladins - John - Consolidated / VueJS / CSV Parsing
+Paladins - Andres - Consolidated / VueJS / CSV Parsing
