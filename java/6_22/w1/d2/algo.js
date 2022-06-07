@@ -23,6 +23,9 @@ class List
 	PushFront(value)
 	{
 		/* Your Code Here */
+		let temp=this.head; /* store the head so we reassign it later */
+		this.head=new Node(value);
+		this.head.next=temp;
 	}
 
 	/* Remove and return the first node in the list, */
@@ -30,12 +33,26 @@ class List
 	PopFront()
 	{
 		/* Your Code Here */
+		let temp=this.head.value;
+		this.head=this.head.next;
+		return temp;
 	}
 
 	/* Calculate and return the average of all the node values in the list. */
 	Average()
 	{
 		/* Your Code Here */
+		let node=this.head;
+		let avg=0;
+		let i=0;
+		while(node)
+		{
+			avg+=node.value;
+			node=node.next;
+			i++
+		}
+		avg/=i;
+		return avg;
 	}
 };
 
@@ -56,6 +73,7 @@ list.PushFront(test_data3);
 
 /* Removes and returns the head of list, but updates the list's head */
 let old_head=list.PopFront();
+// console.log(old_head);
 
 /* Inserts a few more nodes at the beginning of the list */
 list.PushFront(test_data4);
@@ -63,7 +81,7 @@ list.PushFront(test_data5);
 list.PushFront(test_data6);
 
 /* Iterates our list, so we can see our node values */
-list.Iterate(value=>console.log(value));
+// list.Iterate(value=>console.log(value));
 
 /* Expected Output: */
 /*

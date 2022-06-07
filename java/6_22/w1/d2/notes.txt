@@ -1,0 +1,139 @@
+/*****************************************************************************/
+/* Announcements */
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/* App Goals: */
+/* Make a grocery cart app together.*/
+/* Make "Shopper","Cart", and "Grocery" classes */
+/*****************************************************************************/
+
+
+
+/*****************************************************************************/
+/* Morning Lecture: */
+/*****************************************************************************/
+
+/* What is OOP / What is it's purpose?: */
+
+/*
+	Object Oriented Programming
+	Write code once, use classes multiple times.
+	Time saving.
+	Custom Data Types
+	Inheritance
+
+*/
+
+/* What is a class?: */
+
+/*
+	Blueprint
+	Recipe
+	Model
+	Combining data with functionality
+	Variables and functions together
+	Member Variable - A variable that lives on or within a class.
+	Methods - Functions that exist on within a class.
+*/
+
+/* What are Objects?: */
+
+/*
+	Instance of a class
+	Objects are the dish of a recipe.
+*/
+
+/* What is a member variable?: */
+
+/*
+	A variable that lives on a class.
+	Each instance of a class has their own version of this variable.
+*/
+
+/* What is a method?: */
+
+/*
+	A function that lives within or on a class.
+	Each class instance has the functions available to them.
+*/
+
+/* What is a constructor / what is it's purpose?: */
+
+/*
+	Python:
+
+	def __init__(slef):
+		asdasdasd
+
+	JS:
+
+	class Shopper
+	{
+		constructor()
+		{
+			asdasdasd
+		}
+	};
+
+	Java:
+
+	class Shopper
+	{
+
+	};
+
+	Initializes members of an instance as well as creates / allocates it.
+*/
+
+/* What does the new keyword do?: */
+
+/*
+	ArrayList<String> myGroceries=ArrayList<String>();
+
+	The new keyword allocates ram for the class instance.
+	Makes a new instance of the class
+	It creates an instance.
+*/
+
+/*****************************************************************************/
+/* Afternoon Lecture: */
+/*****************************************************************************/
+
+/* What is an access modifier?: */
+
+/*
+
+*/
+
+/* What does the public keyword do?: */
+
+/*
+
+*/
+
+/* What does the private keyword do?: */
+
+/*
+
+*/
+
+/* What does the static keyword do?: */
+
+/*
+
+*/
+
+/* What is method overloading?: */
+
+/*
+
+*/
+
+/* What does the "this" keyword do?: */
+
+/*
+
+*/
