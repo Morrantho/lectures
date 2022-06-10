@@ -23,9 +23,6 @@ class List
 	PushFront(value)
 	{
 		/* Your Code Here */
-		let temp=this.head; /* store the head so we reassign it later */
-		this.head=new Node(value);
-		this.head.next=temp;
 	}
 
 	/* Remove and return the first node in the list, */
@@ -33,26 +30,12 @@ class List
 	PopFront()
 	{
 		/* Your Code Here */
-		let temp=this.head.value;
-		this.head=this.head.next;
-		return temp;
 	}
 
 	/* Calculate and return the average of all the node values in the list. */
 	Average()
 	{
 		/* Your Code Here */
-		let node=this.head;
-		let avg=0;
-		let i=0;
-		while(node)
-		{
-			avg+=node.value;
-			node=node.next;
-			i++
-		}
-		avg/=i;
-		return avg;
 	}
 };
 

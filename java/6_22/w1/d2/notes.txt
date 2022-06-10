@@ -11,7 +11,6 @@
 /*****************************************************************************/
 
 
-
 /*****************************************************************************/
 /* Morning Lecture: */
 /*****************************************************************************/
@@ -105,35 +104,42 @@
 /* What is an access modifier?: */
 
 /*
-
+	* Defining who has access to it.
+	* Variable / Function visibility.
 */
 
 /* What does the public keyword do?: */
 
 /*
-
+	Allows unrestricted accesd to the Member or Method.
 */
 
 /* What does the private keyword do?: */
 
 /*
-
+	It restricts the scope or accessibility of a class, constructor, variables, methods, and data members 
 */
 
 /* What does the static keyword do?: */
 
 /*
+	It can be used with variables, methods, blocks and nested classes.
 
+	A variable or function that exists on the CLASS, but not INSTANCES.
 */
 
 /* What is method overloading?: */
 
 /*
+	Two methods have the same name,but has either different arguments / parameters or return types.
 
+	With method overloading, multiple methods can have the same name with different parameters
 */
 
 /* What does the "this" keyword do?: */
 
 /*
+	Refers to an instance of a class.
 
+	this Keyword in Java is a reference variable that refers to the current object 
 */

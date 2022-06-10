@@ -19,8 +19,21 @@ class List
 		for(let node=this.head;node;node=node.next){fn(node.value);}
 	}
 
+	PushBack(value)
+	{
+		/* Your Code Here */
+	}
+
+	PushBackN(arr)
+	{
+		/* Your Code Here */
+	}
+
 	/* Determines whether the given value was found within the list */
 	/* ( Returns a bool, true or false ) */
+
+	/* value=40 */
+	
 	Contains(value)
 	{
 		/* Your Code Here */
@@ -28,6 +41,9 @@ class List
 
 	/* Recursively determines whether the given value was found within the list. */
 	/* ( Returns a bool, true or false ) */
+
+	/* node=10,20,30 */
+	/* value=30 */
 	ContainsRecursive(node,value)
 	{
 		/* Your Code Here */
@@ -56,14 +72,14 @@ let list=new List();
 /* Remember, it just shoves all of these into our list! */
 list.PushBackN([123,234,345,456,567,678]);
 
-console.log(list.Contains(456)); /* Expected Output: true */
-console.log(list.ContainsR(345)); /* Expected Output: true */
+// console.log(list.Contains(678)); /* Expected Output: true */
+// console.log(list.ContainsRecursive(list.head,345)); /* Expected Output: true */
 console.log(list.PopBack()); /* Expected Output: 678 */
-console.log(list.PopBack()); /* Expected Output: 567 */
-console.log(list.Contains(567)); /* Expected Output: false */
+// console.log(list.PopBack()); /* Expected Output: 567 */
+// console.log(list.Contains(567)); /* Expected Output: false */
 /* Iterates our list, so we can see our node values */
 /* I'm a freebie, don't change me. */
-list.Iterate(value=>console.log(value));
+// list.Iterate(value=>console.log(value));
 /*
 	Expected Output:
 	123

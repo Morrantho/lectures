@@ -19,6 +19,16 @@ class List
 		for(let node=this.head;node;node=node.next){fn(node.value);}
 	}
 
+	PushBack(value)
+	{
+		/* Your Code Here */
+	}
+
+	PushBackN(arr)
+	{
+		/* Your Code Here */
+	}
+
 	/* Return the second to last node's value in the list */
 	SecondToLast()
 	{
@@ -27,7 +37,7 @@ class List
 
 	/* Remove a node whose value matches the given value */
 	/* ( You will need to fix .next pointers too! ) */
-	RemoveValue(value)
+	RemoveValue(value) /* 3 */
 	{
 		/* Your Code Here */
 	}
@@ -64,12 +74,12 @@ let list=new List();
 /* Remember, it just shoves all of these into our list! */
 list.PushBackN([111,222,333,444,555,666]);
 
-console.log(list.SecondToLast()) /* Expected: 555 */
+// console.log(list.SecondToLast()) /* Expected: 555 */
 
-list.RemoveValue(333); /* No Output */
+// list.RemoveValue(333); /* No Output */
 
 /* I'm a freebie, don't delete me! */
-list.Iterate(value=>console.log(value));
+// list.Iterate(value=>console.log(value));
 /*
 	Expected Output after RemoveValue(333):
 	111

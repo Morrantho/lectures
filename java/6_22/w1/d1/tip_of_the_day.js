@@ -9,7 +9,7 @@ randi=(min,max)=>randf(min,max)|0;
 
 let gold=0;
 
-function process_gold(location)
+process_gold=location=>
 {
 	if(location=="farm")
 	{
@@ -46,7 +46,7 @@ location.casino=_=>gold+=randi(0,10)>5?randi(50,100):-randi(50,100);
 /* What if we had 10 more separate locations? No problem. */
 /* This code doesn't need to be changed, because it accounts */
 /* for scalability. */
-function better_process_gold(location)
+better_process_gold=location=>
 {
 	if(!locations[location]) return;
 	locations[location]();
