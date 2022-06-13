@@ -15,34 +15,29 @@ class BST
 		this.root=undefined;
 	}
 
-	/* Time Complexity:  O(1) */
-	/* Space Complexity: O(1) */
-	/* Determine whether the BST is empty */
 	IsEmpty()
 	{
 		/* Your Code Here */
+		return this.root==undefined;
 	}
 
-	/* Time Complexity:  O(N) */
-	/* Space Complexity: O(1) */
-	/* Find the smallest number in the BST */
-	MinR(node)
+	Min()
 	{
 		/* Your Code Here */
-		/* Call me recursively */
+		let node=this.root;
+		while(node.left)
+		{
+			node=node.left;
+		}
+		return node.value;
 	}
 
-	/* Time Complexity:  O(N) */
-	/* Space Complexity: O(1) */
-	/* Find the largest number in the BST */
 	MaxR(node)
 	{
-		/* Your Code Here */
-		/* Call me recursively */
+		if(!node.right) return node.value;
+		return this.MaxR(node.right);
 	}
 
-	/* I'm just here to print your BST In-Order. */
-	/* Could use me as an example to solve above algos, since I'm recursive and all. */
 	Log(node,fmt="")
 	{
 		if(!node) return fmt;
