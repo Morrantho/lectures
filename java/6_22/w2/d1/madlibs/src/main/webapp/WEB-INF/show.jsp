@@ -16,13 +16,12 @@
 <body class="grid p1 bg_white2">
 	<h1 class="text_center">Madlibs</h1>
 	
-	<a href="/reset">Reset</a>
+	<a href="/">Take me home!</a>
 	
-	<form class="grid gap1" action="/submit" method="POST" >
-		<input type="text" name="noun" placeholder="Noun" />
-		<input type="text" name="adjective" placeholder="Adjective" />	
-		<input type="text" name="verb" placeholder="Verb" />		
-		<input class="btn_submit" type="Submit" value="Create Madlib" />
-	</form>
+	<h1>You have created ${madlibs.size()} madlibs so far.</h1>
+	
+	<c:forEach var="madlib" items="${madlibs}" >
+		<p>The ${madlib.adjective} ${madlib.noun} ${madlib.verb}.</p>	
+	</c:forEach>
 </body>
 </html>
