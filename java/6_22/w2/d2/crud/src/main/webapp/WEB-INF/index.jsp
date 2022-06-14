@@ -14,5 +14,22 @@
 </head>
 <body>
 	<h1>I'm a Template</h1>
+	
+	<form:form class="grid" action="/movie" method="POST" modelAttribute="movie">
+		<form:input placeholder="Title" path="title"></form:input>
+		<form:errors class="col_red" path="title"></form:errors>
+
+		<form:errors class="col_red" path="genre"></form:errors>
+		<form:input placeholder="Genre" path="genre"></form:input>		
+
+
+		<form:errors class="col_red" path="release_date"></form:errors>
+		<form:input placeholder="Release Date" type="number" path="release_date"></form:input>		
+
+		<form:errors class="col_red" path="rating"></form:errors>
+		<form:input placeholder="Rating" type="number" path="rating"></form:input>				
+
+		<input type="submit" value="Create Movie!" />
+	</form:form>
 </body>
 </html>
