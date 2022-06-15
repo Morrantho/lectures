@@ -2,6 +2,12 @@
 /* Announcements */
 /*****************************************************************************/
 
+Mid-Track Surveys: https://login.codingdojo.com/dashboard/mid-stack-survey
+
+1:1 Meeting @ 2:00PM CST
+
+Company Meeting @ 4:00PM CST
+
 /*****************************************************************************/
 /* Today's App Goals */
 /*****************************************************************************/
@@ -16,6 +22,18 @@ Use a service as an additional layer of protection and business logic between ou
 database.
 
 Use model annotations for error handling.
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*****************************************************************************/
 /* Morning Lecture */

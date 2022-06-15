@@ -59,8 +59,7 @@ bst.root.left.right=new BSTNode(75);
 bst.root.right.left=new BSTNode(125);
 bst.root.right.right=new BSTNode(175);
 
-
 bst.Insert(44);
-console.log(bst.Log(bst.root)); 	/* Expected: 25->44->50->75->100->125->150->175-> */
+// console.log(bst.Log(bst.root)); 	/* Expected: 25->44->50->75->100->125->150->175-> */
 bst.InsertRecursive(bst.root,22);
 console.log(bst.Log(bst.root));		/* Expected: 22->25->44->50->75->100->125->150->175-> */
