@@ -1,4 +1,4 @@
-package com.codingdojo;
+package com.codingdojo.models;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -9,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -21,6 +22,7 @@ public class Food
 	@Size(min=1,max=255,message="Food name must be between 1-255 characters.")
 	private String name;
 	
+	@NotNull
 	@Min(value=1,message="Rating must be between 1-5")
 	@Max(value=5,message="Rating must be between 1-5")
 	private Integer rating;

@@ -1,4 +1,4 @@
-package com.codingdojo;
+package com.codingdojo.models;
 
 import java.util.List;
 

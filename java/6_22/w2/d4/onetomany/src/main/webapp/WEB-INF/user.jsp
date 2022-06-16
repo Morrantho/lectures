@@ -14,5 +14,12 @@
 </head>
 <body>
 	<h1>I'm a Template</h1>
+	
+	<form:form action="/user/new" method="POST" modelAttribute="user">
+		<form:errors path="name"></form:errors>
+		<form:input placeholder="Enter your name" path="name"></form:input>
+		
+		<input type="submit" value="Register" />
+	</form:form>
 </body>
 </html>

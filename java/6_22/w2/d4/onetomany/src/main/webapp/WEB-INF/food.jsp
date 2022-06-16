@@ -14,5 +14,21 @@
 </head>
 <body>
 	<h1>I'm a Template</h1>
+	
+	<form:form action="/food/new" method="POST" modelAttribute="food">
+		<form:errors path="name"></form:errors>
+		<form:input path="name" placeholder="Name"></form:input>
+
+		<form:errors path="rating"></form:errors>
+		<form:input type="number" path="rating" placeholder="Rating"></form:input>
+
+		<form:select path="user" >
+			<c:forEach var="user" items="${users}">
+				<form:option value="${user.id}" >${user.id} - ${user.name}</form:option>
+			</c:forEach>
+		</form:select>
+
+		<input value="Create Food" type="submit" />
+	</form:form>
 </body>
 </html>
