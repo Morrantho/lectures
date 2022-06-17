@@ -13,6 +13,8 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-	<h1>I'm a Template</h1>
+	<a href="/logout">Logout</a>
+
+	<h1>Welcome, ${user.name} ${user.email}</h1>
 </body>
 </html>

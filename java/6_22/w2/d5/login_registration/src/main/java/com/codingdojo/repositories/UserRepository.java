@@ -1,4 +1,4 @@
-package com.coding.repositories;
+package com.codingdojo.repositories;
 
 import java.util.ArrayList;
 

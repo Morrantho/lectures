@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -19,6 +20,8 @@ public class User
 	@Size(min=3,max=30,message="Name must be between 3-30 characters.")
 	private String name;
 	
+//	@NotNull(message="Email Required")
+	@NotEmpty(message="Email Required")
 	@Email(message="Invalid Email. Example: example@example.com")
 	private String email;
 
