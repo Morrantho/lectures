@@ -30,7 +30,6 @@ class BST
 	Size(node)
 	{
 		if(!node) return 0;
-		/* Call me recursively */
 	}
 
 	/* Time Complexity: O(N) */
@@ -38,7 +37,6 @@ class BST
 	Height(node)
 	{
 		if(!node) return 0;
-		/* Call Me Recursively */
 	}
 };
 /*****************************************************************************/
@@ -53,5 +51,5 @@ bst.root.right=new BSTNode(150);
 bst.root.right.left=new BSTNode(125);
 bst.root.right.right=new BSTNode(175);
 
-console.log(bst.Size(bst.root)); 	/* Expected: 7 */
+// console.log(bst.Size(bst.root)); 	/* Expected: 7 */
 console.log(bst.Height(bst.root)); 	/* Expected: 3 */
