@@ -18,7 +18,7 @@ class MinHeap
 	*/
 	Extract()
 	{
-		/* Your Code Here */
+		
 	}
 
 	Log()
