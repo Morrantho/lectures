@@ -6,7 +6,7 @@ You have until Wednesday of next week to take / retake the exam!
 
 90% of core assignments completed before attempting! ( 9 / 10 for Java )
 
-Exam Code: 2cC21aEe
+Exam Code: 
 
 Reminder that you only need to include the code to activate your exam.
 
@@ -19,34 +19,3 @@ If you miss the timeframe by a few minutes and are no longer able to upload, sen
 Please do not share any details about the exam with your fellow students who have not yet taken the exam!
 
 Please try and start your exam by 11 or 12 CST!
-
-*******************************************************************************
-Agile / Project Talk
-*******************************************************************************
-
-* Wireframes and User Stories on Trello for homework / weekend
-
-* https://login.codingdojo.com/m/315/9908/67124
-
-* https://docs.google.com/spreadsheets/d/1iNqOr1GPZgs1R-6hxWCjVnyaMBwrblhzdWi-_9ueDm0/edit#gid=1945931138
-
-* Project Ideas:
-	* Finance Tracker
-	* Movie Tracker
-	* Spotify Clone
-
-* Teams / Groups on Monday if passed exam.
-
-* Monday EOD: Wireframe + User Stories feedback
-
-*******************************************************************************
-
-1. Tell them the home work assignment for over the weekend. Wireframes and user stories on trello. Send them the link for project week so if they need help with the homework, they can look at the videos in the platform: https://login.codingdojo.com/m/315/9908/67124
-
-2. Have some default ideas for projects (2 ideas, 1 that will take 2 days to complete, and 1 that is more robust which can take 3-4 days to complete)-> this is if they don't have an idea
-
-3. Set up the teams before Monday morning class. (Rob will take care of this)
-
-4. Monday morning we will tell them about the project week teams and to put them selves into a team if they have passed exam. 
-
-5. Monday PM there will be a wireframe and user stories feedback session (group).

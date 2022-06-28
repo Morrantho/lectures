@@ -15,13 +15,40 @@
 <body>
 	<h1>I'm a Template</h1>
 	
+	<table>
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Genre</th>
+				<th>Release Date</th>
+				<th>Rating</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="movie" items="${movies}">
+				<tr>
+					<td><a href="/movie/show/${movie.id}">${movie.title}</a></td>
+					<td>${movie.genre}</td>
+					<td>${movie.release_date}</td>
+					<td>${movie.rating}</td>
+					<td>
+						<a href="/movie/edit/${movie.id}">Edit</a>
+						<form class="flex gap2" action="/movie/delete/${movie.id}" method="POST">
+							<input type="submit" value="Delete" />
+						</form>
+					</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+	
 	<form:form class="grid" action="/movie" method="POST" modelAttribute="movie">
 		<form:input placeholder="Title" path="title"></form:input>
 		<form:errors class="col_red" path="title"></form:errors>
 
 		<form:errors class="col_red" path="genre"></form:errors>
 		<form:input placeholder="Genre" path="genre"></form:input>		
-
 
 		<form:errors class="col_red" path="release_date"></form:errors>
 		<form:input placeholder="Release Date" type="number" path="release_date"></form:input>		

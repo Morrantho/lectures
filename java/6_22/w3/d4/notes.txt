@@ -2,37 +2,44 @@
 Announcements - Week 3 Day 4
 *******************************************************************************
 
-You have until Wednesday of next week to take / retake the exam!
+* 1:1 Meeting @ 2:15-2:45 PM CST
 
-90% of core assignments completed before attempting! ( 9 / 10 for Java )
+* Company Meeting @ 3:00-4:00 PM CST
 
-Exam Code: ________
 
-Reminder that you only need to include the code to activate your exam.
 
-NOTIFY MYSELF, ____, OR _____ FOR A LIVE GRADE OF YOUR EXAM.
+* You have until Wednesday of next week to take or retake the exam!
 
-Please attempt and finish the RED BELT portion of the exam first and then move onto BLACK BELT. If you end up breaking or missing RED BELT features, you will not receive the BLACK BELT. Once you have completed the RED BELT have someone check it, verify the features are all working before you move on and submit what you have on the platform. If you later complete the black belt you can always upload again 
-If you miss the timeframe by a few minutes and are no longer able to upload, send me a message and I can accept it and manually upload as well. Reminder that you don't need to include a video of the exam.
+* 90% of core assignments must be completed before attempting! ( 9 / 10 for Java )
 
-Please do not share any details about the exam with your fellow students who have not yet taken the exam!
+* You only need an exam code to activate your exam.
 
-Please try and start your exam by 11 or 12 CST!
+* NOTIFY MYSELF OR SPENCER FOR A LIVE GRADE.
+
+* Please complete ALL RED BELT FEATURES before attempting BLACK BELT features.
+
+* You CANNOT receive a black belt if you are missing red belt features.
+
+* Once you've completed all red belt features, ask myself or Spencer for a
+
+	review before moving to the black belt features. This will ensure you will
+	
+	at least obtain your red belt, should you miss any black belt features.
+
+* Once you've completed black belt features, you can always reupload.
+
+* If you miss the timeframe by a few minutes and are no longer able to upload,
+
+	zip your exam code and end it to Spencer or myself for manual upload.
+
+* You do not need to include a video of your exam progress.
+
+* Please do not share any details about the exam with your fellow students who have not yet taken the exam!
+
+* Please try and start your exam by 11 CST at the latest, so we can try to have all exams graded by the end of
+
+	today.
 
 *******************************************************************************
-App Goals
+Morning Session - Project Week Discussion!
 *******************************************************************************
-
-Pick up where we left off with belt reviewer
-
-*******************************************************************************
-Morning Lecture
-*******************************************************************************
-
-Pick up where we left off with belt reviewer
-
-*******************************************************************************
-Afternoon Lecture
-*******************************************************************************
-
-Pick up where we left off with belt reviewer

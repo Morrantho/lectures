@@ -44,28 +44,6 @@ class Stack
 	{
 		this.top=undefined;
 	}
-	Push(value)
-	{
-		if(!this.top)
-		{
-			this.top=new Node(value);
-			return;
-		}
-		let top=this.top;
-		this.top=new Node(value);
-		this.top.next=top;
-	}
-	Pop()
-	{
-		if(!this.top) return;
-		let topVal=this.top.value;
-		this.top=this.top.next;
-		return topVal;
-	}
-	IsEmpty()
-	{
-		return this.top==null;
-	}
 };
 /******************************************************************************
 * Class to represent a Queue but is implemented using two stacks to store the
